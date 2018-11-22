@@ -25,7 +25,8 @@ import matplotlib.pyplot as plt
 import cv2
 import pytorch_ssim
 import pytorch_msssim
-
+from tqdm import tqdm
+from utility import timer
 
 def print_save(line, text_path):
     print(line)
@@ -38,6 +39,7 @@ class Trainer(object):
         self.args = args
         self.GPU_IN_USE = torch.cuda.is_available()
         self.device = torch.device('cuda' if self.GPU_IN_USE else 'cpu')
+        self.scale = args.scale
         self.model = None
         self.down = None
         self.lr = args.lr
@@ -46,6 +48,9 @@ class Trainer(object):
         self.optimizer = None
         self.scheduler = None
         self.seed = args.seed
+        self.data_timer = None
+        self.train_timer = None
+        self.test_timer = None
         self.training_loader = training_loader
         self.testing_loader = testing_loader
         self.model_out_path = args.model_path
@@ -60,6 +65,9 @@ class Trainer(object):
             self.model = torch.load(self.args.pretrain, map_location=lambda storage, loc: storage).to(self.device)
         else:
             self.model = edsr.EDSR(self.args).to(self.device)
+        self.data_timer = timer(self.args)
+        self.train_timer = timer(self.args)
+        self.test_timer = timer(self.args)
 
         self.L1 = nn.L1Loss()
         self.L2= nn.MSELoss()
@@ -87,10 +95,17 @@ class Trainer(object):
         self.model.train()
         train_loss = 0
         train_length = 0
+        self.data_timer.start()
         for batch_num, (LR, HR, filename) in enumerate(self.training_loader):
         
             batch_size = LR.size(0)
             LR, HR = LR.to(self.device), HR.to(self.device)
+            self.data_timer.stop()
+            if batch_num == 0:
+                self.train_timer.start()
+            else:
+                self.train_timer.go()
+
             SR = self.model(LR)
                 
 
@@ -109,13 +124,23 @@ class Trainer(object):
             self.optimizer.zero_grad()
             loss.backward()
             self.optimizer.step()
-            train_length += batch_size
-            if(batch_num+1 % self.args.print_every == 0):
-                print_save("    Average Loss: {:.4f}".format((train_loss / train_length)), self.text_path)
+            self.train_timer.stop()
             
+            train_length += batch_size
+            if(batch_num+1) % self.args.print_every == 0:
+                print_save("[{:4d}/{:4d}]    Average Loss: {:.4f}    overall time: {:.4f} + {:.4f}"
+                .format(batch_num+1, len(self.training_loader),(train_loss / train_length), 
+                self.data_timer.overall, self.train_timer.overall), self.text_path)
+                self.data_timer.start()
+                self.train_timer.start()
+            else:
+                self.data_timer.go()
+
         self.loss.append(train_loss / train_length)
-        print_save("    Average Loss: {:.4f}".format((train_loss / train_length)), self.text_path)
-    
+        print_save("[{:4d}/{:4d}]    Average Loss: {:.4f}    overall time: {:.4f} + {:.4f}"
+                .format(batch_num+1, len(self.training_loader),(train_loss / train_length), 
+                self.data_timer.overall, self.train_timer.overall), self.text_path)
+
     def test(self):
         self.model.eval()
         val_length = 0
@@ -124,19 +149,19 @@ class Trainer(object):
         avg_msssim = 0
         with torch.no_grad():
             for batch_num, (LR, HR, filename) in enumerate(self.testing_loader):
-                
+
                 batch_size = LR.size(0)
                 LR, HR = LR.to(self.device), HR.to(self.device)
 
-                prediction = self.model(LR)
-                
+                SR = self.model(LR)
+
                 for idx in range(batch_size):
-                    res = prediction[idx,:,:,:].unsqueeze(dim=0)
+                    res = SR[idx,:,:,:].unsqueeze(dim=0)
                     ret = HR[idx,:,:,:].unsqueeze(dim=0)
                     val_length +=1
                     mse = self.L2(res/self.args.rgb_range,ret/self.args.rgb_range)
                     psnr = -10 * math.log10( mse)
-                    psnr = calc_psnr(res, ret, self.args.scale, self.args.rgb_range)
+                    psnr = calc_psnr(res, ret, int(self.args.scale[0]), self.args.rgb_range)
                     ssim = self.ssim_loss(res, ret)
                     msssim = self.msssim_loss(res, ret)
                     avg_psnr += psnr
@@ -158,14 +183,15 @@ class Trainer(object):
                     os.makedirs(res_dir)    
                 
                 if self.args.test_only:
-                    save_image(LR, LR_name)
-                    save_image(HR, HR_name)
-                    save_image(prediction, res_name)
-                    print(res_name, 'is completed')          
+                    save_image(LR/self.args.rgb_range, LR_name)
+                    save_image(HR/self.args.rgb_range, HR_name)
+                    save_image(SR/self.args.rgb_range, res_name)
+                    #print(res_name, 'is completed')          
             self.psnr.append(avg_psnr/val_length)
-            print_save("    Average PSNR: {:.4f}".format(avg_psnr/ val_length), self.text_path)
-            print_save("    Average SSIM: {:.4f}".format(avg_ssim/ val_length), self.text_path)
-            print_save("    Average MSSSIM: {:.4f}".format(avg_msssim/ val_length), self.text_path)
+            self.ssim.append(avg_ssim/val_length)
+            print_save("Average PSNR: {:.4f}".format(avg_psnr/ val_length), self.text_path)
+            print_save("Average SSIM: {:.4f}".format(avg_ssim/ val_length), self.text_path)
+            print_save("Average MSSSIM: {:.4f}".format(avg_msssim/ val_length), self.text_path)
 
     def save(self):
         #model_out_path = str(self.epoch) + self.model_out_path
@@ -185,7 +211,8 @@ class Trainer(object):
         plt.ylabel('PSNR(dB)')
         ax3 = fig.add_subplot(3,1,3)
         plt.xlabel('Epoch')
-
+        print(self.loss)
+        print(self.psnr)
         if(len(X) == len(self.loss) and len(X) == len(self.psnr)):
             ax1.plot(X, self.loss)
             ax2.plot(Y, self.psnr)
@@ -210,13 +237,9 @@ class Trainer(object):
             if not self.args.test_only:
                 self.train()
                 self.scheduler.step(epoch)
+                self.test()
+                self.save() 
                 
-                if((self.epoch+1) % self.args.test_iters == 0 ):
-                    #self.plot(epoch)
-                    self.test()
-                    self.save() 
-                if self.epoch == self.epochs-1:
-                    self.save()  
             if self.args.test_only:
                 print('Test start')
                 self.test()

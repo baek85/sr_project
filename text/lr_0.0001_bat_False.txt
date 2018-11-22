@@ -1134,3 +1134,3152 @@ lr : 0.0001
     Average MSSSIM: 0.9949
 
 ===> Epoch 87 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 1.1689
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 1.1279
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 1.1822
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.3929
+
+===> Epoch 1 starts:
+    Average Loss: 0.2779
+
+===> Epoch 2 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.3907
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average PSNR: 11.2370
+    Average SSIM: -0.0064
+    Average MSSSIM: nan
+
+===> Epoch 1 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.3972
+    Average PSNR: 32.9096
+    Average SSIM: 0.7765
+    Average MSSSIM: 0.9922
+
+===> Epoch 1 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.3929
+    Average PSNR: 33.2049
+    Average SSIM: 0.7741
+    Average MSSSIM: 0.9929
+
+===> Epoch 1 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.3974
+    Average PSNR: 33.2170
+    Average SSIM: 0.7786
+    Average MSSSIM: 0.9929
+
+===> Epoch 1 starts:
+    Average Loss: 0.2804
+    Average PSNR: 33.5797
+    Average SSIM: 0.7822
+    Average MSSSIM: 0.9938
+
+===> Epoch 2 starts:
+    Average Loss: 0.2679
+    Average PSNR: 34.0768
+    Average SSIM: 0.8009
+    Average MSSSIM: 0.9945
+
+===> Epoch 3 starts:
+    Average Loss: 0.2546
+    Average PSNR: 34.3384
+    Average SSIM: 0.7981
+    Average MSSSIM: 0.9948
+
+===> Epoch 4 starts:
+    Average Loss: 0.2558
+    Average PSNR: 34.1934
+    Average SSIM: 0.7988
+    Average MSSSIM: 0.9943
+
+===> Epoch 5 starts:
+    Average Loss: 0.2471
+    Average PSNR: 34.5334
+    Average SSIM: 0.8132
+    Average MSSSIM: 0.9950
+
+===> Epoch 6 starts:
+    Average Loss: 0.2448
+    Average PSNR: 34.6327
+    Average SSIM: 0.8079
+    Average MSSSIM: 0.9951
+
+===> Epoch 7 starts:
+    Average Loss: 0.2447
+    Average PSNR: 34.7217
+    Average SSIM: 0.8141
+    Average MSSSIM: 0.9952
+
+===> Epoch 8 starts:
+    Average Loss: 0.2417
+    Average PSNR: 34.6952
+    Average SSIM: 0.8140
+    Average MSSSIM: 0.9951
+
+===> Epoch 9 starts:
+    Average Loss: 0.2393
+    Average PSNR: 34.7996
+    Average SSIM: 0.8129
+    Average MSSSIM: 0.9953
+
+===> Epoch 10 starts:
+    Average Loss: 0.2368
+    Average PSNR: 34.7925
+    Average SSIM: 0.8098
+    Average MSSSIM: 0.9953
+
+===> Epoch 11 starts:
+    Average Loss: 0.2368
+    Average PSNR: 34.8285
+    Average SSIM: 0.8098
+    Average MSSSIM: 0.9953
+
+===> Epoch 12 starts:
+    Average Loss: 0.2354
+    Average PSNR: 34.9049
+    Average SSIM: 0.8215
+    Average MSSSIM: 0.9954
+
+===> Epoch 13 starts:
+    Average Loss: 0.2341
+    Average PSNR: 34.8515
+    Average SSIM: 0.8086
+    Average MSSSIM: 0.9954
+
+===> Epoch 14 starts:
+    Average Loss: 0.2343
+    Average PSNR: 34.8399
+    Average SSIM: 0.8198
+    Average MSSSIM: 0.9953
+
+===> Epoch 15 starts:
+    Average Loss: 0.2334
+    Average PSNR: 34.9144
+    Average SSIM: 0.8170
+    Average MSSSIM: 0.9954
+
+===> Epoch 16 starts:
+    Average Loss: 0.2302
+    Average PSNR: 34.8623
+    Average SSIM: 0.8084
+    Average MSSSIM: 0.9953
+
+===> Epoch 17 starts:
+    Average Loss: 0.2311
+    Average PSNR: 35.0043
+    Average SSIM: 0.8185
+    Average MSSSIM: 0.9955
+
+===> Epoch 18 starts:
+    Average Loss: 0.2315
+    Average PSNR: 34.9167
+    Average SSIM: 0.8080
+    Average MSSSIM: 0.9954
+
+===> Epoch 19 starts:
+    Average Loss: 0.2289
+    Average PSNR: 34.6718
+    Average SSIM: 0.8204
+    Average MSSSIM: 0.9950
+
+===> Epoch 20 starts:
+    Average Loss: 0.2295
+    Average PSNR: 34.8915
+    Average SSIM: 0.8198
+    Average MSSSIM: 0.9954
+
+===> Epoch 21 starts:
+    Average Loss: 0.2297
+    Average PSNR: 34.9369
+    Average SSIM: 0.8197
+    Average MSSSIM: 0.9954
+
+===> Epoch 22 starts:
+    Average Loss: 0.2279
+    Average PSNR: 35.0786
+    Average SSIM: 0.8187
+    Average MSSSIM: 0.9955
+
+===> Epoch 23 starts:
+    Average Loss: 0.2281
+    Average PSNR: 35.0814
+    Average SSIM: 0.8199
+    Average MSSSIM: 0.9955
+
+===> Epoch 24 starts:
+    Average Loss: 0.2286
+    Average PSNR: 35.0643
+    Average SSIM: 0.8190
+    Average MSSSIM: 0.9955
+
+===> Epoch 25 starts:
+    Average Loss: 0.2267
+    Average PSNR: 34.6218
+    Average SSIM: 0.8230
+    Average MSSSIM: 0.9951
+
+===> Epoch 26 starts:
+    Average Loss: 0.2267
+    Average PSNR: 35.0886
+    Average SSIM: 0.8194
+    Average MSSSIM: 0.9955
+
+===> Epoch 27 starts:
+    Average Loss: 0.2270
+    Average PSNR: 35.0502
+    Average SSIM: 0.8218
+    Average MSSSIM: 0.9955
+
+===> Epoch 28 starts:
+    Average Loss: 0.2263
+    Average PSNR: 35.1279
+    Average SSIM: 0.8223
+    Average MSSSIM: 0.9956
+
+===> Epoch 29 starts:
+    Average Loss: 0.2262
+    Average PSNR: 35.1390
+    Average SSIM: 0.8233
+    Average MSSSIM: 0.9956
+
+===> Epoch 30 starts:
+    Average Loss: 0.2261
+    Average PSNR: 35.1327
+    Average SSIM: 0.8205
+    Average MSSSIM: 0.9955
+
+===> Epoch 31 starts:
+    Average Loss: 0.2231
+    Average PSNR: 34.9747
+    Average SSIM: 0.8190
+    Average MSSSIM: 0.9954
+
+===> Epoch 32 starts:
+    Average Loss: 0.2244
+    Average PSNR: 35.1543
+    Average SSIM: 0.8249
+    Average MSSSIM: 0.9956
+
+===> Epoch 33 starts:
+    Average Loss: 0.2235
+    Average PSNR: 35.1396
+    Average SSIM: 0.8265
+    Average MSSSIM: 0.9956
+
+===> Epoch 34 starts:
+    Average Loss: 0.2223
+    Average PSNR: 35.1958
+    Average SSIM: 0.8230
+    Average MSSSIM: 0.9956
+
+===> Epoch 35 starts:
+    Average Loss: 0.2226
+    Average PSNR: 35.1440
+    Average SSIM: 0.8209
+    Average MSSSIM: 0.9956
+
+===> Epoch 36 starts:
+    Average Loss: 0.2202
+    Average PSNR: 35.2352
+    Average SSIM: 0.8206
+    Average MSSSIM: 0.9956
+
+===> Epoch 37 starts:
+    Average Loss: 0.2247
+    Average PSNR: 35.1592
+    Average SSIM: 0.8247
+    Average MSSSIM: 0.9955
+
+===> Epoch 38 starts:
+    Average Loss: 0.2242
+    Average PSNR: 35.0336
+    Average SSIM: 0.8227
+    Average MSSSIM: 0.9955
+
+===> Epoch 39 starts:
+    Average Loss: 0.2222
+    Average PSNR: 35.2236
+    Average SSIM: 0.8230
+    Average MSSSIM: 0.9956
+
+===> Epoch 40 starts:
+    Average Loss: 0.2230
+    Average PSNR: 35.2005
+    Average SSIM: 0.8198
+    Average MSSSIM: 0.9956
+
+===> Epoch 41 starts:
+    Average Loss: 0.2219
+    Average PSNR: 35.2788
+    Average SSIM: 0.8232
+    Average MSSSIM: 0.9956
+
+===> Epoch 42 starts:
+    Average Loss: 0.2214
+    Average PSNR: 35.1748
+    Average SSIM: 0.8249
+    Average MSSSIM: 0.9955
+
+===> Epoch 43 starts:
+    Average Loss: 0.2219
+    Average PSNR: 35.2121
+    Average SSIM: 0.8220
+    Average MSSSIM: 0.9956
+
+===> Epoch 44 starts:
+    Average Loss: 0.2215
+    Average PSNR: 35.1480
+    Average SSIM: 0.8246
+    Average MSSSIM: 0.9955
+
+===> Epoch 45 starts:
+    Average Loss: 0.2229
+    Average PSNR: 35.1857
+    Average SSIM: 0.8277
+    Average MSSSIM: 0.9955
+
+===> Epoch 46 starts:
+    Average Loss: 0.2229
+    Average PSNR: 35.2363
+    Average SSIM: 0.8210
+    Average MSSSIM: 0.9956
+
+===> Epoch 47 starts:
+    Average Loss: 0.2226
+    Average PSNR: 35.3041
+    Average SSIM: 0.8245
+    Average MSSSIM: 0.9957
+
+===> Epoch 48 starts:
+    Average Loss: 0.2203
+    Average PSNR: 35.3012
+    Average SSIM: 0.8255
+    Average MSSSIM: 0.9956
+
+===> Epoch 49 starts:
+    Average Loss: 0.2207
+    Average PSNR: 35.2621
+    Average SSIM: 0.8247
+    Average MSSSIM: 0.9957
+
+===> Epoch 50 starts:
+    Average Loss: 0.2183
+    Average PSNR: 35.3043
+    Average SSIM: 0.8277
+    Average MSSSIM: 0.9957
+
+===> Epoch 51 starts:
+    Average Loss: 0.2200
+    Average PSNR: 35.2671
+    Average SSIM: 0.8256
+    Average MSSSIM: 0.9957
+
+===> Epoch 52 starts:
+    Average Loss: 0.2206
+    Average PSNR: 35.2279
+    Average SSIM: 0.8267
+    Average MSSSIM: 0.9956
+
+===> Epoch 53 starts:
+    Average Loss: 0.2235
+    Average PSNR: 35.2822
+    Average SSIM: 0.8314
+    Average MSSSIM: 0.9957
+
+===> Epoch 54 starts:
+    Average Loss: 0.2194
+    Average PSNR: 35.2560
+    Average SSIM: 0.8216
+    Average MSSSIM: 0.9957
+
+===> Epoch 55 starts:
+    Average Loss: 0.2226
+    Average PSNR: 35.3090
+    Average SSIM: 0.8261
+    Average MSSSIM: 0.9957
+
+===> Epoch 56 starts:
+    Average Loss: 0.2198
+    Average PSNR: 35.3391
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9957
+
+===> Epoch 57 starts:
+    Average Loss: 0.2199
+    Average PSNR: 35.3360
+    Average SSIM: 0.8254
+    Average MSSSIM: 0.9957
+
+===> Epoch 58 starts:
+    Average Loss: 0.2184
+    Average PSNR: 35.3349
+    Average SSIM: 0.8220
+    Average MSSSIM: 0.9957
+
+===> Epoch 59 starts:
+    Average Loss: 0.2178
+    Average PSNR: 35.2547
+    Average SSIM: 0.8258
+    Average MSSSIM: 0.9956
+
+===> Epoch 60 starts:
+    Average Loss: 0.2179
+    Average PSNR: 35.3596
+    Average SSIM: 0.8258
+    Average MSSSIM: 0.9957
+
+===> Epoch 61 starts:
+    Average Loss: 0.2187
+    Average PSNR: 35.3880
+    Average SSIM: 0.8288
+    Average MSSSIM: 0.9957
+
+===> Epoch 62 starts:
+    Average Loss: 0.2205
+    Average PSNR: 35.3692
+    Average SSIM: 0.8257
+    Average MSSSIM: 0.9957
+
+===> Epoch 63 starts:
+    Average Loss: 0.2206
+    Average PSNR: 35.2728
+    Average SSIM: 0.8227
+    Average MSSSIM: 0.9957
+
+===> Epoch 64 starts:
+    Average Loss: 0.2181
+    Average PSNR: 35.3139
+    Average SSIM: 0.8233
+    Average MSSSIM: 0.9956
+
+===> Epoch 65 starts:
+    Average Loss: 0.2172
+    Average PSNR: 35.3515
+    Average SSIM: 0.8248
+    Average MSSSIM: 0.9957
+
+===> Epoch 66 starts:
+    Average Loss: 0.2183
+    Average PSNR: 35.3794
+    Average SSIM: 0.8223
+    Average MSSSIM: 0.9957
+
+===> Epoch 67 starts:
+    Average Loss: 0.2203
+    Average PSNR: 35.3514
+    Average SSIM: 0.8265
+    Average MSSSIM: 0.9957
+
+===> Epoch 68 starts:
+    Average Loss: 0.2195
+    Average PSNR: 35.4216
+    Average SSIM: 0.8282
+    Average MSSSIM: 0.9957
+
+===> Epoch 69 starts:
+    Average Loss: 0.2203
+    Average PSNR: 35.3787
+    Average SSIM: 0.8254
+    Average MSSSIM: 0.9957
+
+===> Epoch 70 starts:
+    Average Loss: 0.2190
+    Average PSNR: 35.3633
+    Average SSIM: 0.8319
+    Average MSSSIM: 0.9957
+
+===> Epoch 71 starts:
+    Average Loss: 0.2205
+    Average PSNR: 35.4291
+    Average SSIM: 0.8299
+    Average MSSSIM: 0.9957
+
+===> Epoch 72 starts:
+    Average Loss: 0.2175
+    Average PSNR: 35.2635
+    Average SSIM: 0.8287
+    Average MSSSIM: 0.9956
+
+===> Epoch 73 starts:
+    Average Loss: 0.2179
+    Average PSNR: 35.3749
+    Average SSIM: 0.8261
+    Average MSSSIM: 0.9957
+
+===> Epoch 74 starts:
+    Average Loss: 0.2155
+    Average PSNR: 35.3628
+    Average SSIM: 0.8310
+    Average MSSSIM: 0.9957
+
+===> Epoch 75 starts:
+    Average Loss: 0.2178
+    Average PSNR: 35.3740
+    Average SSIM: 0.8272
+    Average MSSSIM: 0.9957
+
+===> Epoch 76 starts:
+    Average Loss: 0.2167
+    Average PSNR: 35.3534
+    Average SSIM: 0.8253
+    Average MSSSIM: 0.9957
+
+===> Epoch 77 starts:
+    Average Loss: 0.2187
+    Average PSNR: 35.2274
+    Average SSIM: 0.8262
+    Average MSSSIM: 0.9956
+
+===> Epoch 78 starts:
+    Average Loss: 0.2188
+    Average PSNR: 35.3601
+    Average SSIM: 0.8274
+    Average MSSSIM: 0.9957
+
+===> Epoch 79 starts:
+    Average Loss: 0.2186
+    Average PSNR: 35.3736
+    Average SSIM: 0.8236
+    Average MSSSIM: 0.9957
+
+===> Epoch 80 starts:
+    Average Loss: 0.2193
+    Average PSNR: 35.4120
+    Average SSIM: 0.8285
+    Average MSSSIM: 0.9957
+
+===> Epoch 81 starts:
+    Average Loss: 0.2171
+    Average PSNR: 35.4062
+    Average SSIM: 0.8281
+    Average MSSSIM: 0.9957
+
+===> Epoch 82 starts:
+    Average Loss: 0.2174
+    Average PSNR: 35.2078
+    Average SSIM: 0.8266
+    Average MSSSIM: 0.9956
+
+===> Epoch 83 starts:
+    Average Loss: 0.2201
+    Average PSNR: 35.4061
+    Average SSIM: 0.8235
+    Average MSSSIM: 0.9957
+
+===> Epoch 84 starts:
+    Average Loss: 0.2168
+    Average PSNR: 35.4021
+    Average SSIM: 0.8285
+    Average MSSSIM: 0.9957
+
+===> Epoch 85 starts:
+    Average Loss: 0.2171
+    Average PSNR: 35.4322
+    Average SSIM: 0.8284
+    Average MSSSIM: 0.9957
+
+===> Epoch 86 starts:
+    Average Loss: 0.2178
+    Average PSNR: 35.3632
+    Average SSIM: 0.8252
+    Average MSSSIM: 0.9957
+
+===> Epoch 87 starts:
+    Average Loss: 0.2170
+    Average PSNR: 35.3210
+    Average SSIM: 0.8271
+    Average MSSSIM: 0.9957
+
+===> Epoch 88 starts:
+    Average Loss: 0.2171
+    Average PSNR: 35.4296
+    Average SSIM: 0.8275
+    Average MSSSIM: 0.9957
+
+===> Epoch 89 starts:
+    Average Loss: 0.2186
+    Average PSNR: 35.4110
+    Average SSIM: 0.8267
+    Average MSSSIM: 0.9957
+
+===> Epoch 90 starts:
+    Average Loss: 0.2179
+    Average PSNR: 35.4487
+    Average SSIM: 0.8245
+    Average MSSSIM: 0.9957
+
+===> Epoch 91 starts:
+    Average Loss: 0.2175
+    Average PSNR: 35.4094
+    Average SSIM: 0.8269
+    Average MSSSIM: 0.9958
+
+===> Epoch 92 starts:
+    Average Loss: 0.2166
+    Average PSNR: 35.3184
+    Average SSIM: 0.8260
+    Average MSSSIM: 0.9957
+
+===> Epoch 93 starts:
+    Average Loss: 0.2172
+    Average PSNR: 35.3142
+    Average SSIM: 0.8253
+    Average MSSSIM: 0.9957
+
+===> Epoch 94 starts:
+    Average Loss: 0.2152
+    Average PSNR: 35.3567
+    Average SSIM: 0.8307
+    Average MSSSIM: 0.9957
+
+===> Epoch 95 starts:
+    Average Loss: 0.2174
+    Average PSNR: 35.3972
+    Average SSIM: 0.8262
+    Average MSSSIM: 0.9957
+
+===> Epoch 96 starts:
+    Average Loss: 0.2151
+    Average PSNR: 35.3666
+    Average SSIM: 0.8281
+    Average MSSSIM: 0.9957
+
+===> Epoch 97 starts:
+    Average Loss: 0.2175
+    Average PSNR: 35.4549
+    Average SSIM: 0.8268
+    Average MSSSIM: 0.9957
+
+===> Epoch 98 starts:
+    Average Loss: 0.2163
+    Average PSNR: 35.4513
+    Average SSIM: 0.8270
+    Average MSSSIM: 0.9958
+
+===> Epoch 99 starts:
+    Average Loss: 0.2167
+    Average PSNR: 35.3216
+    Average SSIM: 0.8272
+    Average MSSSIM: 0.9957
+
+===> Epoch 100 starts:
+    Average Loss: 0.2144
+    Average PSNR: 35.4553
+    Average SSIM: 0.8298
+    Average MSSSIM: 0.9958
+
+===> Epoch 101 starts:
+    Average Loss: 0.2170
+    Average PSNR: 35.3953
+    Average SSIM: 0.8240
+    Average MSSSIM: 0.9957
+
+===> Epoch 102 starts:
+    Average Loss: 0.2182
+    Average PSNR: 35.4226
+    Average SSIM: 0.8262
+    Average MSSSIM: 0.9957
+
+===> Epoch 103 starts:
+    Average Loss: 0.2169
+    Average PSNR: 35.4605
+    Average SSIM: 0.8279
+    Average MSSSIM: 0.9958
+
+===> Epoch 104 starts:
+    Average Loss: 0.2183
+    Average PSNR: 35.4200
+    Average SSIM: 0.8278
+    Average MSSSIM: 0.9958
+
+===> Epoch 105 starts:
+    Average Loss: 0.2160
+    Average PSNR: 35.4016
+    Average SSIM: 0.8317
+    Average MSSSIM: 0.9958
+
+===> Epoch 106 starts:
+    Average Loss: 0.2172
+    Average PSNR: 35.3911
+    Average SSIM: 0.8298
+    Average MSSSIM: 0.9957
+
+===> Epoch 107 starts:
+    Average Loss: 0.2178
+    Average PSNR: 35.4550
+    Average SSIM: 0.8259
+    Average MSSSIM: 0.9957
+
+===> Epoch 108 starts:
+    Average Loss: 0.2161
+    Average PSNR: 35.2200
+    Average SSIM: 0.8304
+    Average MSSSIM: 0.9957
+
+===> Epoch 109 starts:
+    Average Loss: 0.2161
+    Average PSNR: 35.3926
+    Average SSIM: 0.8295
+    Average MSSSIM: 0.9957
+
+===> Epoch 110 starts:
+    Average Loss: 0.2154
+    Average PSNR: 35.4485
+    Average SSIM: 0.8274
+    Average MSSSIM: 0.9957
+
+===> Epoch 111 starts:
+    Average Loss: 0.2149
+    Average PSNR: 35.4460
+    Average SSIM: 0.8289
+    Average MSSSIM: 0.9958
+
+===> Epoch 112 starts:
+    Average Loss: 0.2166
+    Average PSNR: 35.4368
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9958
+
+===> Epoch 113 starts:
+    Average Loss: 0.2157
+    Average PSNR: 35.4360
+    Average SSIM: 0.8280
+    Average MSSSIM: 0.9957
+
+===> Epoch 114 starts:
+    Average Loss: 0.2182
+    Average PSNR: 35.4504
+    Average SSIM: 0.8308
+    Average MSSSIM: 0.9957
+
+===> Epoch 115 starts:
+    Average Loss: 0.2155
+    Average PSNR: 35.4280
+    Average SSIM: 0.8276
+    Average MSSSIM: 0.9957
+
+===> Epoch 116 starts:
+    Average Loss: 0.2143
+    Average PSNR: 35.4773
+    Average SSIM: 0.8282
+    Average MSSSIM: 0.9958
+
+===> Epoch 117 starts:
+    Average Loss: 0.2144
+    Average PSNR: 35.4299
+    Average SSIM: 0.8309
+    Average MSSSIM: 0.9958
+
+===> Epoch 118 starts:
+    Average Loss: 0.2148
+    Average PSNR: 35.4728
+    Average SSIM: 0.8276
+    Average MSSSIM: 0.9958
+
+===> Epoch 119 starts:
+    Average Loss: 0.2150
+    Average PSNR: 35.4647
+    Average SSIM: 0.8275
+    Average MSSSIM: 0.9958
+
+===> Epoch 120 starts:
+    Average Loss: 0.2157
+    Average PSNR: 35.4670
+    Average SSIM: 0.8288
+    Average MSSSIM: 0.9958
+
+===> Epoch 121 starts:
+    Average Loss: 0.2163
+    Average PSNR: 35.4072
+    Average SSIM: 0.8291
+    Average MSSSIM: 0.9958
+
+===> Epoch 122 starts:
+    Average Loss: 0.2179
+    Average PSNR: 35.4249
+    Average SSIM: 0.8257
+    Average MSSSIM: 0.9957
+
+===> Epoch 123 starts:
+    Average Loss: 0.2156
+    Average PSNR: 35.4563
+    Average SSIM: 0.8304
+    Average MSSSIM: 0.9958
+
+===> Epoch 124 starts:
+    Average Loss: 0.2169
+    Average PSNR: 35.4459
+    Average SSIM: 0.8282
+    Average MSSSIM: 0.9957
+
+===> Epoch 125 starts:
+    Average Loss: 0.2148
+    Average PSNR: 35.4602
+    Average SSIM: 0.8292
+    Average MSSSIM: 0.9958
+
+===> Epoch 126 starts:
+    Average Loss: 0.2173
+    Average PSNR: 35.4792
+    Average SSIM: 0.8291
+    Average MSSSIM: 0.9958
+
+===> Epoch 127 starts:
+    Average Loss: 0.2164
+    Average PSNR: 35.4222
+    Average SSIM: 0.8312
+    Average MSSSIM: 0.9958
+
+===> Epoch 128 starts:
+    Average Loss: 0.2163
+    Average PSNR: 35.3285
+    Average SSIM: 0.8255
+    Average MSSSIM: 0.9956
+
+===> Epoch 129 starts:
+    Average Loss: 0.2183
+    Average PSNR: 35.4812
+    Average SSIM: 0.8271
+    Average MSSSIM: 0.9958
+
+===> Epoch 130 starts:
+    Average Loss: 0.2173
+    Average PSNR: 35.5077
+    Average SSIM: 0.8276
+    Average MSSSIM: 0.9958
+
+===> Epoch 131 starts:
+    Average Loss: 0.2163
+    Average PSNR: 35.4743
+    Average SSIM: 0.8224
+    Average MSSSIM: 0.9958
+
+===> Epoch 132 starts:
+    Average Loss: 0.2159
+    Average PSNR: 35.3973
+    Average SSIM: 0.8271
+    Average MSSSIM: 0.9956
+
+===> Epoch 133 starts:
+    Average Loss: 0.2144
+    Average PSNR: 35.4823
+    Average SSIM: 0.8284
+    Average MSSSIM: 0.9958
+
+===> Epoch 134 starts:
+    Average Loss: 0.2150
+    Average PSNR: 35.4806
+    Average SSIM: 0.8260
+    Average MSSSIM: 0.9958
+
+===> Epoch 135 starts:
+    Average Loss: 0.2152
+    Average PSNR: 35.3123
+    Average SSIM: 0.8263
+    Average MSSSIM: 0.9957
+
+===> Epoch 136 starts:
+    Average Loss: 0.2162
+    Average PSNR: 35.4214
+    Average SSIM: 0.8319
+    Average MSSSIM: 0.9957
+
+===> Epoch 137 starts:
+    Average Loss: 0.2171
+    Average PSNR: 35.4768
+    Average SSIM: 0.8314
+    Average MSSSIM: 0.9958
+
+===> Epoch 138 starts:
+    Average Loss: 0.2155
+    Average PSNR: 35.4852
+    Average SSIM: 0.8308
+    Average MSSSIM: 0.9958
+
+===> Epoch 139 starts:
+    Average Loss: 0.2152
+    Average PSNR: 35.4782
+    Average SSIM: 0.8276
+    Average MSSSIM: 0.9958
+
+===> Epoch 140 starts:
+    Average Loss: 0.2172
+    Average PSNR: 35.4487
+    Average SSIM: 0.8276
+    Average MSSSIM: 0.9958
+
+===> Epoch 141 starts:
+    Average Loss: 0.2157
+    Average PSNR: 35.4658
+    Average SSIM: 0.8289
+    Average MSSSIM: 0.9958
+
+===> Epoch 142 starts:
+    Average Loss: 0.2143
+    Average PSNR: 35.4440
+    Average SSIM: 0.8327
+    Average MSSSIM: 0.9957
+
+===> Epoch 143 starts:
+    Average Loss: 0.2155
+    Average PSNR: 35.5114
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9958
+
+===> Epoch 144 starts:
+    Average Loss: 0.2132
+    Average PSNR: 35.4301
+    Average SSIM: 0.8281
+    Average MSSSIM: 0.9957
+
+===> Epoch 145 starts:
+    Average Loss: 0.2150
+    Average PSNR: 35.5024
+    Average SSIM: 0.8302
+    Average MSSSIM: 0.9958
+
+===> Epoch 146 starts:
+    Average Loss: 0.2159
+    Average PSNR: 35.4911
+    Average SSIM: 0.8306
+    Average MSSSIM: 0.9958
+
+===> Epoch 147 starts:
+    Average Loss: 0.2144
+    Average PSNR: 35.4926
+    Average SSIM: 0.8328
+    Average MSSSIM: 0.9958
+
+===> Epoch 148 starts:
+    Average Loss: 0.2132
+    Average PSNR: 35.1800
+    Average SSIM: 0.8298
+    Average MSSSIM: 0.9957
+
+===> Epoch 149 starts:
+    Average Loss: 0.2131
+    Average PSNR: 35.5064
+    Average SSIM: 0.8273
+    Average MSSSIM: 0.9958
+
+===> Epoch 150 starts:
+    Average Loss: 0.2166
+    Average PSNR: 35.4080
+    Average SSIM: 0.8282
+    Average MSSSIM: 0.9957
+
+===> Epoch 151 starts:
+    Average Loss: 0.2162
+    Average PSNR: 35.4804
+    Average SSIM: 0.8282
+    Average MSSSIM: 0.9958
+
+===> Epoch 152 starts:
+    Average Loss: 0.2164
+    Average PSNR: 35.5065
+    Average SSIM: 0.8258
+    Average MSSSIM: 0.9958
+
+===> Epoch 153 starts:
+    Average Loss: 0.2153
+    Average PSNR: 35.4973
+    Average SSIM: 0.8277
+    Average MSSSIM: 0.9958
+
+===> Epoch 154 starts:
+    Average Loss: 0.2174
+    Average PSNR: 35.4574
+    Average SSIM: 0.8317
+    Average MSSSIM: 0.9957
+
+===> Epoch 155 starts:
+    Average Loss: 0.2160
+    Average PSNR: 35.4428
+    Average SSIM: 0.8267
+    Average MSSSIM: 0.9958
+
+===> Epoch 156 starts:
+    Average Loss: 0.2162
+    Average PSNR: 35.5097
+    Average SSIM: 0.8296
+    Average MSSSIM: 0.9958
+
+===> Epoch 157 starts:
+    Average Loss: 0.2163
+    Average PSNR: 35.5119
+    Average SSIM: 0.8324
+    Average MSSSIM: 0.9958
+
+===> Epoch 158 starts:
+    Average Loss: 0.2121
+    Average PSNR: 35.4498
+    Average SSIM: 0.8276
+    Average MSSSIM: 0.9958
+
+===> Epoch 159 starts:
+    Average Loss: 0.2148
+    Average PSNR: 35.4657
+    Average SSIM: 0.8275
+    Average MSSSIM: 0.9958
+
+===> Epoch 160 starts:
+    Average Loss: 0.2134
+    Average PSNR: 35.4847
+    Average SSIM: 0.8289
+    Average MSSSIM: 0.9958
+
+===> Epoch 161 starts:
+    Average Loss: 0.2180
+    Average PSNR: 35.5090
+    Average SSIM: 0.8284
+    Average MSSSIM: 0.9958
+
+===> Epoch 162 starts:
+    Average Loss: 0.2127
+    Average PSNR: 35.5369
+    Average SSIM: 0.8313
+    Average MSSSIM: 0.9958
+
+===> Epoch 163 starts:
+    Average Loss: 0.2145
+    Average PSNR: 35.5009
+    Average SSIM: 0.8280
+    Average MSSSIM: 0.9958
+
+===> Epoch 164 starts:
+    Average Loss: 0.2154
+    Average PSNR: 35.4783
+    Average SSIM: 0.8286
+    Average MSSSIM: 0.9958
+
+===> Epoch 165 starts:
+    Average Loss: 0.2148
+    Average PSNR: 35.4630
+    Average SSIM: 0.8286
+    Average MSSSIM: 0.9958
+
+===> Epoch 166 starts:
+    Average Loss: 0.2126
+    Average PSNR: 35.5206
+    Average SSIM: 0.8270
+    Average MSSSIM: 0.9958
+
+===> Epoch 167 starts:
+    Average Loss: 0.2149
+    Average PSNR: 35.5246
+    Average SSIM: 0.8284
+    Average MSSSIM: 0.9958
+
+===> Epoch 168 starts:
+    Average Loss: 0.2137
+    Average PSNR: 35.5119
+    Average SSIM: 0.8285
+    Average MSSSIM: 0.9958
+
+===> Epoch 169 starts:
+    Average Loss: 0.2146
+    Average PSNR: 35.5283
+    Average SSIM: 0.8313
+    Average MSSSIM: 0.9958
+
+===> Epoch 170 starts:
+    Average Loss: 0.2161
+    Average PSNR: 35.4716
+    Average SSIM: 0.8286
+    Average MSSSIM: 0.9958
+
+===> Epoch 171 starts:
+    Average Loss: 0.2146
+    Average PSNR: 35.4368
+    Average SSIM: 0.8278
+    Average MSSSIM: 0.9957
+
+===> Epoch 172 starts:
+    Average Loss: 0.2147
+    Average PSNR: 35.5451
+    Average SSIM: 0.8316
+    Average MSSSIM: 0.9958
+
+===> Epoch 173 starts:
+    Average Loss: 0.2146
+    Average PSNR: 35.5220
+    Average SSIM: 0.8297
+    Average MSSSIM: 0.9958
+
+===> Epoch 174 starts:
+    Average Loss: 0.2138
+    Average PSNR: 35.2506
+    Average SSIM: 0.8284
+    Average MSSSIM: 0.9956
+
+===> Epoch 175 starts:
+    Average Loss: 0.2140
+    Average PSNR: 35.5407
+    Average SSIM: 0.8273
+    Average MSSSIM: 0.9958
+
+===> Epoch 176 starts:
+    Average Loss: 0.2142
+    Average PSNR: 35.5014
+    Average SSIM: 0.8278
+    Average MSSSIM: 0.9958
+
+===> Epoch 177 starts:
+    Average Loss: 0.2144
+    Average PSNR: 35.5278
+    Average SSIM: 0.8284
+    Average MSSSIM: 0.9958
+
+===> Epoch 178 starts:
+    Average Loss: 0.2137
+    Average PSNR: 35.5335
+    Average SSIM: 0.8280
+    Average MSSSIM: 0.9958
+
+===> Epoch 179 starts:
+    Average Loss: 0.2139
+    Average PSNR: 35.5128
+    Average SSIM: 0.8318
+    Average MSSSIM: 0.9958
+
+===> Epoch 180 starts:
+    Average Loss: 0.2136
+    Average PSNR: 35.4758
+    Average SSIM: 0.8268
+    Average MSSSIM: 0.9958
+
+===> Epoch 181 starts:
+    Average Loss: 0.2159
+    Average PSNR: 35.4545
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9957
+
+===> Epoch 182 starts:
+    Average Loss: 0.2137
+    Average PSNR: 35.5289
+    Average SSIM: 0.8277
+    Average MSSSIM: 0.9958
+
+===> Epoch 183 starts:
+    Average Loss: 0.2122
+    Average PSNR: 35.5275
+    Average SSIM: 0.8280
+    Average MSSSIM: 0.9958
+
+===> Epoch 184 starts:
+    Average Loss: 0.2132
+    Average PSNR: 35.5503
+    Average SSIM: 0.8300
+    Average MSSSIM: 0.9958
+
+===> Epoch 185 starts:
+    Average Loss: 0.2124
+    Average PSNR: 35.5292
+    Average SSIM: 0.8275
+    Average MSSSIM: 0.9958
+
+===> Epoch 186 starts:
+    Average Loss: 0.2157
+    Average PSNR: 35.5354
+    Average SSIM: 0.8279
+    Average MSSSIM: 0.9958
+
+===> Epoch 187 starts:
+    Average Loss: 0.2131
+    Average PSNR: 35.4965
+    Average SSIM: 0.8338
+    Average MSSSIM: 0.9958
+
+===> Epoch 188 starts:
+    Average Loss: 0.2132
+    Average PSNR: 35.5425
+    Average SSIM: 0.8292
+    Average MSSSIM: 0.9958
+
+===> Epoch 189 starts:
+    Average Loss: 0.2138
+    Average PSNR: 35.4773
+    Average SSIM: 0.8282
+    Average MSSSIM: 0.9958
+
+===> Epoch 190 starts:
+    Average Loss: 0.2127
+    Average PSNR: 35.5343
+    Average SSIM: 0.8303
+    Average MSSSIM: 0.9958
+
+===> Epoch 191 starts:
+    Average Loss: 0.2161
+    Average PSNR: 35.5321
+    Average SSIM: 0.8324
+    Average MSSSIM: 0.9958
+
+===> Epoch 192 starts:
+    Average Loss: 0.2139
+    Average PSNR: 35.4590
+    Average SSIM: 0.8284
+    Average MSSSIM: 0.9956
+
+===> Epoch 193 starts:
+    Average Loss: 0.2142
+    Average PSNR: 35.5113
+    Average SSIM: 0.8275
+    Average MSSSIM: 0.9958
+
+===> Epoch 194 starts:
+    Average Loss: 0.2129
+    Average PSNR: 35.5288
+    Average SSIM: 0.8288
+    Average MSSSIM: 0.9958
+
+===> Epoch 195 starts:
+    Average Loss: 0.2122
+    Average PSNR: 35.5370
+    Average SSIM: 0.8284
+    Average MSSSIM: 0.9958
+
+===> Epoch 196 starts:
+    Average Loss: 0.2146
+    Average PSNR: 35.4858
+    Average SSIM: 0.8282
+    Average MSSSIM: 0.9958
+
+===> Epoch 197 starts:
+    Average Loss: 0.2128
+    Average PSNR: 35.5362
+    Average SSIM: 0.8295
+    Average MSSSIM: 0.9958
+
+===> Epoch 198 starts:
+    Average Loss: 0.2129
+    Average PSNR: 35.4498
+    Average SSIM: 0.8279
+    Average MSSSIM: 0.9957
+
+===> Epoch 199 starts:
+    Average Loss: 0.2141
+    Average PSNR: 35.5181
+    Average SSIM: 0.8277
+    Average MSSSIM: 0.9958
+
+===> Epoch 200 starts:
+    Average Loss: 0.2146
+    Average PSNR: 35.5465
+    Average SSIM: 0.8317
+    Average MSSSIM: 0.9958
+
+===> Epoch 201 starts:
+    Average Loss: 0.2113
+    Average PSNR: 35.5803
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9958
+
+===> Epoch 202 starts:
+    Average Loss: 0.2143
+    Average PSNR: 35.5886
+    Average SSIM: 0.8313
+    Average MSSSIM: 0.9958
+
+===> Epoch 203 starts:
+    Average Loss: 0.2113
+    Average PSNR: 35.5752
+    Average SSIM: 0.8306
+    Average MSSSIM: 0.9958
+
+===> Epoch 204 starts:
+    Average Loss: 0.2126
+    Average PSNR: 35.5817
+    Average SSIM: 0.8297
+    Average MSSSIM: 0.9958
+
+===> Epoch 205 starts:
+    Average Loss: 0.2119
+    Average PSNR: 35.5841
+    Average SSIM: 0.8298
+    Average MSSSIM: 0.9958
+
+===> Epoch 206 starts:
+    Average Loss: 0.2109
+    Average PSNR: 35.5944
+    Average SSIM: 0.8332
+    Average MSSSIM: 0.9959
+
+===> Epoch 207 starts:
+    Average Loss: 0.2105
+    Average PSNR: 35.5787
+    Average SSIM: 0.8294
+    Average MSSSIM: 0.9958
+
+===> Epoch 208 starts:
+    Average Loss: 0.2100
+    Average PSNR: 35.5925
+    Average SSIM: 0.8320
+    Average MSSSIM: 0.9958
+
+===> Epoch 209 starts:
+    Average Loss: 0.2124
+    Average PSNR: 35.5565
+    Average SSIM: 0.8286
+    Average MSSSIM: 0.9958
+
+===> Epoch 210 starts:
+    Average Loss: 0.2112
+    Average PSNR: 35.6003
+    Average SSIM: 0.8291
+    Average MSSSIM: 0.9958
+
+===> Epoch 211 starts:
+    Average Loss: 0.2132
+    Average PSNR: 35.5769
+    Average SSIM: 0.8280
+    Average MSSSIM: 0.9958
+
+===> Epoch 212 starts:
+    Average Loss: 0.2109
+    Average PSNR: 35.5885
+    Average SSIM: 0.8303
+    Average MSSSIM: 0.9958
+
+===> Epoch 213 starts:
+    Average Loss: 0.2112
+    Average PSNR: 35.5907
+    Average SSIM: 0.8291
+    Average MSSSIM: 0.9958
+
+===> Epoch 214 starts:
+    Average Loss: 0.2125
+    Average PSNR: 35.5776
+    Average SSIM: 0.8286
+    Average MSSSIM: 0.9958
+
+===> Epoch 215 starts:
+    Average Loss: 0.2079
+    Average PSNR: 35.5814
+    Average SSIM: 0.8279
+    Average MSSSIM: 0.9958
+
+===> Epoch 216 starts:
+    Average Loss: 0.2123
+    Average PSNR: 35.5849
+    Average SSIM: 0.8305
+    Average MSSSIM: 0.9958
+
+===> Epoch 217 starts:
+    Average Loss: 0.2125
+    Average PSNR: 35.5816
+    Average SSIM: 0.8284
+    Average MSSSIM: 0.9958
+
+===> Epoch 218 starts:
+    Average Loss: 0.2108
+    Average PSNR: 35.5945
+    Average SSIM: 0.8295
+    Average MSSSIM: 0.9959
+
+===> Epoch 219 starts:
+    Average Loss: 0.2117
+    Average PSNR: 35.6066
+    Average SSIM: 0.8291
+    Average MSSSIM: 0.9959
+
+===> Epoch 220 starts:
+    Average Loss: 0.2121
+    Average PSNR: 35.5947
+    Average SSIM: 0.8298
+    Average MSSSIM: 0.9959
+
+===> Epoch 221 starts:
+    Average Loss: 0.2094
+    Average PSNR: 35.6007
+    Average SSIM: 0.8308
+    Average MSSSIM: 0.9959
+
+===> Epoch 222 starts:
+    Average Loss: 0.2111
+    Average PSNR: 35.6091
+    Average SSIM: 0.8285
+    Average MSSSIM: 0.9959
+
+===> Epoch 223 starts:
+    Average Loss: 0.2114
+    Average PSNR: 35.6162
+    Average SSIM: 0.8289
+    Average MSSSIM: 0.9959
+
+===> Epoch 224 starts:
+    Average Loss: 0.2130
+    Average PSNR: 35.5849
+    Average SSIM: 0.8303
+    Average MSSSIM: 0.9958
+
+===> Epoch 225 starts:
+    Average Loss: 0.2113
+    Average PSNR: 35.6128
+    Average SSIM: 0.8307
+    Average MSSSIM: 0.9959
+
+===> Epoch 226 starts:
+    Average Loss: 0.2104
+    Average PSNR: 35.5580
+    Average SSIM: 0.8317
+    Average MSSSIM: 0.9958
+
+===> Epoch 227 starts:
+    Average Loss: 0.2136
+    Average PSNR: 35.5947
+    Average SSIM: 0.8292
+    Average MSSSIM: 0.9958
+
+===> Epoch 228 starts:
+    Average Loss: 0.2142
+    Average PSNR: 35.6093
+    Average SSIM: 0.8301
+    Average MSSSIM: 0.9959
+
+===> Epoch 229 starts:
+    Average Loss: 0.2089
+    Average PSNR: 35.6074
+    Average SSIM: 0.8289
+    Average MSSSIM: 0.9959
+
+===> Epoch 230 starts:
+    Average Loss: 0.2135
+    Average PSNR: 35.6130
+    Average SSIM: 0.8290
+    Average MSSSIM: 0.9959
+
+===> Epoch 231 starts:
+    Average Loss: 0.2102
+    Average PSNR: 35.5683
+    Average SSIM: 0.8350
+    Average MSSSIM: 0.9959
+
+===> Epoch 232 starts:
+    Average Loss: 0.2109
+    Average PSNR: 35.6098
+    Average SSIM: 0.8301
+    Average MSSSIM: 0.9959
+
+===> Epoch 233 starts:
+    Average Loss: 0.2119
+    Average PSNR: 35.6159
+    Average SSIM: 0.8297
+    Average MSSSIM: 0.9959
+
+===> Epoch 234 starts:
+    Average Loss: 0.2102
+    Average PSNR: 35.6078
+    Average SSIM: 0.8298
+    Average MSSSIM: 0.9959
+
+===> Epoch 235 starts:
+    Average Loss: 0.2106
+    Average PSNR: 35.6129
+    Average SSIM: 0.8299
+    Average MSSSIM: 0.9959
+
+===> Epoch 236 starts:
+    Average Loss: 0.2119
+    Average PSNR: 35.6149
+    Average SSIM: 0.8286
+    Average MSSSIM: 0.9959
+
+===> Epoch 237 starts:
+    Average Loss: 0.2114
+    Average PSNR: 35.6073
+    Average SSIM: 0.8300
+    Average MSSSIM: 0.9959
+
+===> Epoch 238 starts:
+    Average Loss: 0.2109
+    Average PSNR: 35.6089
+    Average SSIM: 0.8300
+    Average MSSSIM: 0.9959
+
+===> Epoch 239 starts:
+    Average Loss: 0.2108
+    Average PSNR: 35.6111
+    Average SSIM: 0.8300
+    Average MSSSIM: 0.9959
+
+===> Epoch 240 starts:
+    Average Loss: 0.2119
+    Average PSNR: 35.6073
+    Average SSIM: 0.8292
+    Average MSSSIM: 0.9959
+
+===> Epoch 241 starts:
+    Average Loss: 0.2099
+    Average PSNR: 35.6238
+    Average SSIM: 0.8333
+    Average MSSSIM: 0.9959
+
+===> Epoch 242 starts:
+    Average Loss: 0.2111
+    Average PSNR: 35.6065
+    Average SSIM: 0.8325
+    Average MSSSIM: 0.9958
+
+===> Epoch 243 starts:
+    Average Loss: 0.2075
+    Average PSNR: 35.6017
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9958
+
+===> Epoch 244 starts:
+    Average Loss: 0.2117
+    Average PSNR: 35.5729
+    Average SSIM: 0.8321
+    Average MSSSIM: 0.9958
+
+===> Epoch 245 starts:
+    Average Loss: 0.2114
+    Average PSNR: 35.5972
+    Average SSIM: 0.8304
+    Average MSSSIM: 0.9958
+
+===> Epoch 246 starts:
+    Average Loss: 0.2099
+    Average PSNR: 35.6025
+    Average SSIM: 0.8282
+    Average MSSSIM: 0.9959
+
+===> Epoch 247 starts:
+    Average Loss: 0.2134
+    Average PSNR: 35.5955
+    Average SSIM: 0.8289
+    Average MSSSIM: 0.9959
+
+===> Epoch 248 starts:
+    Average Loss: 0.2104
+    Average PSNR: 35.6222
+    Average SSIM: 0.8298
+    Average MSSSIM: 0.9959
+
+===> Epoch 249 starts:
+    Average Loss: 0.2116
+    Average PSNR: 35.6074
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9958
+
+===> Epoch 250 starts:
+    Average Loss: 0.2106
+    Average PSNR: 35.5817
+    Average SSIM: 0.8300
+    Average MSSSIM: 0.9958
+
+===> Epoch 251 starts:
+    Average Loss: 0.2127
+    Average PSNR: 35.6060
+    Average SSIM: 0.8283
+    Average MSSSIM: 0.9958
+
+===> Epoch 252 starts:
+    Average Loss: 0.2117
+    Average PSNR: 35.6113
+    Average SSIM: 0.8292
+    Average MSSSIM: 0.9959
+
+===> Epoch 253 starts:
+    Average Loss: 0.2112
+    Average PSNR: 35.6321
+    Average SSIM: 0.8299
+    Average MSSSIM: 0.9959
+
+===> Epoch 254 starts:
+    Average Loss: 0.2097
+    Average PSNR: 35.6239
+    Average SSIM: 0.8292
+    Average MSSSIM: 0.9959
+
+===> Epoch 255 starts:
+    Average Loss: 0.2133
+    Average PSNR: 35.6087
+    Average SSIM: 0.8325
+    Average MSSSIM: 0.9959
+
+===> Epoch 256 starts:
+    Average Loss: 0.2107
+    Average PSNR: 35.6317
+    Average SSIM: 0.8290
+    Average MSSSIM: 0.9959
+
+===> Epoch 257 starts:
+    Average Loss: 0.2096
+    Average PSNR: 35.6143
+    Average SSIM: 0.8297
+    Average MSSSIM: 0.9959
+
+===> Epoch 258 starts:
+    Average Loss: 0.2114
+    Average PSNR: 35.6201
+    Average SSIM: 0.8297
+    Average MSSSIM: 0.9959
+
+===> Epoch 259 starts:
+    Average Loss: 0.2116
+    Average PSNR: 35.6194
+    Average SSIM: 0.8303
+    Average MSSSIM: 0.9959
+
+===> Epoch 260 starts:
+    Average Loss: 0.2106
+    Average PSNR: 35.6115
+    Average SSIM: 0.8326
+    Average MSSSIM: 0.9959
+
+===> Epoch 261 starts:
+    Average Loss: 0.2080
+    Average PSNR: 35.6215
+    Average SSIM: 0.8295
+    Average MSSSIM: 0.9959
+
+===> Epoch 262 starts:
+    Average Loss: 0.2103
+    Average PSNR: 35.6184
+    Average SSIM: 0.8288
+    Average MSSSIM: 0.9959
+
+===> Epoch 263 starts:
+    Average Loss: 0.2124
+    Average PSNR: 35.6263
+    Average SSIM: 0.8298
+    Average MSSSIM: 0.9959
+
+===> Epoch 264 starts:
+    Average Loss: 0.2097
+    Average PSNR: 35.6046
+    Average SSIM: 0.8283
+    Average MSSSIM: 0.9959
+
+===> Epoch 265 starts:
+    Average Loss: 0.2109
+    Average PSNR: 35.6132
+    Average SSIM: 0.8287
+    Average MSSSIM: 0.9959
+
+===> Epoch 266 starts:
+    Average Loss: 0.2110
+    Average PSNR: 35.6177
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9959
+
+===> Epoch 267 starts:
+    Average Loss: 0.2111
+    Average PSNR: 35.6396
+    Average SSIM: 0.8302
+    Average MSSSIM: 0.9959
+
+===> Epoch 268 starts:
+    Average Loss: 0.2117
+    Average PSNR: 35.6209
+    Average SSIM: 0.8295
+    Average MSSSIM: 0.9959
+
+===> Epoch 269 starts:
+    Average Loss: 0.2101
+    Average PSNR: 35.6161
+    Average SSIM: 0.8336
+    Average MSSSIM: 0.9959
+
+===> Epoch 270 starts:
+    Average Loss: 0.2105
+    Average PSNR: 35.6064
+    Average SSIM: 0.8294
+    Average MSSSIM: 0.9959
+
+===> Epoch 271 starts:
+    Average Loss: 0.2108
+    Average PSNR: 35.6236
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9959
+
+===> Epoch 272 starts:
+    Average Loss: 0.2103
+    Average PSNR: 35.6312
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9959
+
+===> Epoch 273 starts:
+    Average Loss: 0.2101
+    Average PSNR: 35.6220
+    Average SSIM: 0.8290
+    Average MSSSIM: 0.9959
+
+===> Epoch 274 starts:
+    Average Loss: 0.2103
+    Average PSNR: 35.6215
+    Average SSIM: 0.8310
+    Average MSSSIM: 0.9959
+
+===> Epoch 275 starts:
+    Average Loss: 0.2106
+    Average PSNR: 35.5968
+    Average SSIM: 0.8297
+    Average MSSSIM: 0.9958
+
+===> Epoch 276 starts:
+    Average Loss: 0.2099
+    Average PSNR: 35.6070
+    Average SSIM: 0.8341
+    Average MSSSIM: 0.9959
+
+===> Epoch 277 starts:
+    Average Loss: 0.2102
+    Average PSNR: 35.6358
+    Average SSIM: 0.8296
+    Average MSSSIM: 0.9959
+
+===> Epoch 278 starts:
+    Average Loss: 0.2105
+    Average PSNR: 35.6114
+    Average SSIM: 0.8293
+    Average MSSSIM: 0.9959
+
+===> Epoch 279 starts:
+    Average Loss: 0.2090
+    Average PSNR: 35.5941
+    Average SSIM: 0.8299
+    Average MSSSIM: 0.9958
+
+===> Epoch 280 starts:
+    Average Loss: 0.2111
+    Average PSNR: 35.6072
+    Average SSIM: 0.8299
+    Average MSSSIM: 0.9959
+
+===> Epoch 281 starts:
+    Average Loss: 0.2108
+    Average PSNR: 35.6406
+    Average SSIM: 0.8344
+    Average MSSSIM: 0.9959
+
+===> Epoch 282 starts:
+    Average Loss: 0.2091
+    Average PSNR: 35.6338
+    Average SSIM: 0.8296
+    Average MSSSIM: 0.9959
+
+===> Epoch 283 starts:
+    Average Loss: 0.2106
+    Average PSNR: 35.6221
+    Average SSIM: 0.8297
+    Average MSSSIM: 0.9959
+
+===> Epoch 284 starts:
+    Average Loss: 0.2127
+    Average PSNR: 35.6026
+    Average SSIM: 0.8285
+    Average MSSSIM: 0.9959
+
+===> Epoch 285 starts:
+    Average Loss: 0.2107
+    Average PSNR: 35.6366
+    Average SSIM: 0.8304
+    Average MSSSIM: 0.9959
+
+===> Epoch 286 starts:
+    Average Loss: 0.2124
+    Average PSNR: 35.6096
+    Average SSIM: 0.8294
+    Average MSSSIM: 0.9959
+
+===> Epoch 287 starts:
+    Average Loss: 0.2104
+    Average PSNR: 35.6165
+    Average SSIM: 0.8296
+    Average MSSSIM: 0.9959
+
+===> Epoch 288 starts:
+    Average Loss: 0.2092
+    Average PSNR: 35.6190
+    Average SSIM: 0.8299
+    Average MSSSIM: 0.9959
+
+===> Epoch 289 starts:
+    Average Loss: 0.2103
+    Average PSNR: 35.6288
+    Average SSIM: 0.8288
+    Average MSSSIM: 0.9959
+
+===> Epoch 290 starts:
+    Average Loss: 0.2089
+    Average PSNR: 35.6278
+    Average SSIM: 0.8341
+    Average MSSSIM: 0.9959
+
+===> Epoch 291 starts:
+    Average Loss: 0.2132
+    Average PSNR: 35.6059
+    Average SSIM: 0.8297
+    Average MSSSIM: 0.9959
+
+===> Epoch 292 starts:
+    Average Loss: 0.2111
+    Average PSNR: 35.6293
+    Average SSIM: 0.8294
+    Average MSSSIM: 0.9959
+
+===> Epoch 293 starts:
+    Average Loss: 0.2107
+    Average PSNR: 35.6040
+    Average SSIM: 0.8291
+    Average MSSSIM: 0.9959
+
+===> Epoch 294 starts:
+    Average Loss: 0.2089
+    Average PSNR: 35.6102
+    Average SSIM: 0.8337
+    Average MSSSIM: 0.9959
+
+===> Epoch 295 starts:
+    Average Loss: 0.2110
+    Average PSNR: 35.6042
+    Average SSIM: 0.8323
+    Average MSSSIM: 0.9958
+
+===> Epoch 296 starts:
+    Average Loss: 0.2092
+    Average PSNR: 35.6163
+    Average SSIM: 0.8301
+    Average MSSSIM: 0.9959
+
+===> Epoch 297 starts:
+    Average Loss: 0.2094
+    Average PSNR: 35.6280
+    Average SSIM: 0.8324
+    Average MSSSIM: 0.9959
+
+===> Epoch 298 starts:
+    Average Loss: 0.2117
+    Average PSNR: 35.6174
+    Average SSIM: 0.8300
+    Average MSSSIM: 0.9959
+
+===> Epoch 299 starts:
+    Average Loss: 0.2086
+    Average PSNR: 35.6253
+    Average SSIM: 0.8302
+    Average MSSSIM: 0.9959
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average PSNR: 34.5798
+    Average SSIM: 0.7904
+    Average MSSSIM: 0.9958
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.8640
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.8893
+    overall time: 308572927383.5112
+    Average Loss: 0.6768
+    overall time: 308572928626.9581
+    Average Loss: 0.5805
+    overall time: 308572929881.2896
+    Average Loss: 0.5235
+    overall time: 308572931126.3597
+    Average Loss: 0.4844
+    overall time: 308572932391.8232
+    Average Loss: 0.4587
+    overall time: 308572933668.6583
+    Average Loss: 0.4367
+    overall time: 308572934945.5347
+    Average Loss: 0.4191
+    overall time: 308572936215.9901
+    Average Loss: 0.4063
+    overall time: 308572937500.1301
+    Average Loss: 0.3962
+    overall time: 308572938781.1099
+    overall time: 0.0000
+    Average Loss: 0.3962
+    Average PSNR: 33.0463
+    Average SSIM: 0.7698
+    Average MSSSIM: 0.9925
+
+===> Epoch 1 starts:
+    Average Loss: 0.2859
+    overall time: 308572942073.3739
+    Average Loss: 0.2836
+    overall time: 308572943367.0152
+    Average Loss: 0.2838
+    overall time: 308572944674.5555
+    Average Loss: 0.2818
+    overall time: 308572945959.4976
+    Average Loss: 0.2827
+    overall time: 308572947216.6747
+    Average Loss: 0.2834
+    overall time: 308572948500.7867
+    Average Loss: 0.2845
+    overall time: 308572949790.3921
+    Average Loss: 0.2831
+    overall time: 308572951076.7223
+    Average Loss: 0.2806
+    overall time: 308572952373.4824
+    Average Loss: 0.2809
+    overall time: 308572953668.9098
+    overall time: 0.0000
+    Average Loss: 0.2809
+    Average PSNR: 33.7106
+    Average SSIM: 0.7929
+    Average MSSSIM: 0.9941
+
+===> Epoch 2 starts:
+    Average Loss: 0.2660
+    overall time: 308572956023.6441
+    Average Loss: 0.2626
+    overall time: 308572957318.8331
+    Average Loss: 0.2614
+    overall time: 308572958609.4929
+    Average Loss: 0.2616
+    overall time: 308572959896.0535
+    Average Loss: 0.2613
+    overall time: 308572961172.1436
+    Average Loss: 0.2605
+    overall time: 308572962433.4045
+    Average Loss: 0.2608
+    overall time: 308572963690.1833
+    Average Loss: 0.2604
+    overall time: 308572964967.2015
+    Average Loss: 0.2606
+    overall time: 308572966270.0123
+    Average Loss: 0.2612
+    overall time: 308572967569.7137
+    overall time: 0.0000
+    Average Loss: 0.2612
+    Average PSNR: 34.1192
+    Average SSIM: 0.7883
+    Average MSSSIM: 0.9946
+
+===> Epoch 3 starts:
+    Average Loss: 0.2642
+    overall time: 308572969902.8856
+    Average Loss: 0.2633
+    overall time: 308572971148.0763
+    Average Loss: 0.2580
+    overall time: 308572972399.3899
+    Average Loss: 0.2579
+    overall time: 308572973651.0775
+    Average Loss: 0.2581
+    overall time: 308572974900.1454
+    Average Loss: 0.2595
+    overall time: 308572976151.7379
+    Average Loss: 0.2576
+    overall time: 308572977407.9921
+    Average Loss: 0.2570
+    overall time: 308572978674.5342
+    Average Loss: 0.2549
+    overall time: 308572979933.5435
+    Average Loss: 0.2553
+    overall time: 308572981186.3652
+    overall time: 0.0000
+    Average Loss: 0.2553
+    Average PSNR: 34.3147
+    Average SSIM: 0.8106
+    Average MSSSIM: 0.9948
+
+===> Epoch 4 starts:
+    Average Loss: 0.2521
+    overall time: 308572983527.7630
+    Average Loss: 0.2525
+    overall time: 308572984797.6450
+    Average Loss: 0.2528
+    overall time: 308572986075.3437
+    Average Loss: 0.2495
+    overall time: 308572987343.4435
+    Average Loss: 0.2510
+    overall time: 308572988600.9355
+    Average Loss: 0.2515
+    overall time: 308572989856.8844
+    Average Loss: 0.2534
+    overall time: 308572991116.6311
+    Average Loss: 0.2535
+    overall time: 308572992378.3333
+    Average Loss: 0.2532
+    overall time: 308572993647.9644
+    Average Loss: 0.2529
+    overall time: 308572994921.7867
+    overall time: 0.0000
+    Average Loss: 0.2529
+    Average PSNR: 34.5418
+    Average SSIM: 0.8062
+    Average MSSSIM: 0.9950
+
+===> Epoch 5 starts:
+    Average Loss: 0.2434
+    overall time: 308572997264.2301
+    Average Loss: 0.2472
+    overall time: 308572998518.3440
+    Average Loss: 0.2500
+    overall time: 308572999774.1236
+    Average Loss: 0.2472
+    overall time: 308573001032.3191
+    Average Loss: 0.2476
+    overall time: 308573002298.7023
+    Average Loss: 0.2452
+    overall time: 308573003573.6651
+    Average Loss: 0.2469
+    overall time: 308573004843.5183
+    Average Loss: 0.2464
+    overall time: 308573006119.0156
+    Average Loss: 0.2466
+    overall time: 308573007390.3035
+    Average Loss: 0.2462
+    overall time: 308573008662.7937
+    overall time: 0.0000
+    Average Loss: 0.2462
+    Average PSNR: 34.5446
+    Average SSIM: 0.8159
+    Average MSSSIM: 0.9950
+
+===> Epoch 6 starts:
+    Average Loss: 0.2469
+    overall time: 308573011021.1700
+    Average Loss: 0.2490
+    overall time: 308573012306.7748
+    Average Loss: 0.2472
+    overall time: 308573013593.4854
+    Average Loss: 0.2456
+    overall time: 308573014874.3341
+    Average Loss: 0.2450
+    overall time: 308573016158.1961
+    Average Loss: 0.2454
+    overall time: 308573017431.2446
+    Average Loss: 0.2445
+    overall time: 308573018707.0249
+    Average Loss: 0.2463
+    overall time: 308573019970.3244
+    Average Loss: 0.2458
+    overall time: 308573021213.9035
+    Average Loss: 0.2455
+    overall time: 308573022469.6476
+    overall time: 0.0000
+    Average Loss: 0.2455
+    Average PSNR: 34.4802
+    Average SSIM: 0.8099
+    Average MSSSIM: 0.9948
+
+===> Epoch 7 starts:
+    Average Loss: 0.2469
+    overall time: 308573024827.4665
+    Average Loss: 0.2470
+    overall time: 308573026104.4244
+    Average Loss: 0.2433
+    overall time: 308573027387.1614
+    Average Loss: 0.2444
+    overall time: 308573028670.3491
+    Average Loss: 0.2462
+    overall time: 308573029960.4065
+    Average Loss: 0.2460
+    overall time: 308573031243.8993
+    Average Loss: 0.2447
+    overall time: 308573032527.0692
+    Average Loss: 0.2442
+    overall time: 308573033805.9018
+    Average Loss: 0.2449
+    overall time: 308573035094.7307
+    Average Loss: 0.2448
+    overall time: 308573036375.6730
+    overall time: 0.0000
+    Average Loss: 0.2448
+    Average PSNR: 34.6921
+    Average SSIM: 0.8108
+    Average MSSSIM: 0.9952
+
+===> Epoch 8 starts:
+    Average Loss: 0.2388
+    overall time: 308573038754.8284
+    Average Loss: 0.2417
+    overall time: 308573040015.8945
+    Average Loss: 0.2369
+    overall time: 308573041286.5986
+    Average Loss: 0.2373
+    overall time: 308573042544.5969
+    Average Loss: 0.2361
+    overall time: 308573043798.0549
+    Average Loss: 0.2373
+    overall time: 308573045073.7635
+    Average Loss: 0.2372
+    overall time: 308573046350.9261
+    Average Loss: 0.2379
+    overall time: 308573047629.3621
+    Average Loss: 0.2385
+    overall time: 308573048914.1744
+    Average Loss: 0.2387
+    overall time: 308573050190.4696
+    overall time: 0.0000
+    Average Loss: 0.2387
+    Average PSNR: 34.8096
+    Average SSIM: 0.8120
+    Average MSSSIM: 0.9952
+
+===> Epoch 9 starts:
+    Average Loss: 0.2406
+    overall time: 308573052542.8803
+    Average Loss: 0.2415
+    overall time: 308573053804.9390
+    Average Loss: 0.2419
+    overall time: 308573055070.4788
+    Average Loss: 0.2403
+    overall time: 308573056339.8597
+    Average Loss: 0.2400
+    overall time: 308573057613.3856
+    Average Loss: 0.2398
+    overall time: 308573058888.8456
+    Average Loss: 0.2400
+    overall time: 308573060158.9520
+    Average Loss: 0.2385
+    overall time: 308573061420.1795
+    Average Loss: 0.2383
+    overall time: 308573062658.1475
+    Average Loss: 0.2392
+    overall time: 308573063915.9302
+    overall time: 0.0000
+    Average Loss: 0.2392
+    Average PSNR: 34.6917
+    Average SSIM: 0.8052
+    Average MSSSIM: 0.9952
+
+===> Epoch 10 starts:
+    Average Loss: 0.2344
+    overall time: 308573066271.4972
+    Average Loss: 0.2363
+    overall time: 308573067536.4719
+    Average Loss: 0.2367
+    overall time: 308573068806.5274
+    Average Loss: 0.2374
+    overall time: 308573070078.3226
+    Average Loss: 0.2396
+    overall time: 308573071349.6933
+    Average Loss: 0.2389
+    overall time: 308573072622.0425
+    Average Loss: 0.2380
+    overall time: 308573073891.8804
+    Average Loss: 0.2383
+    overall time: 308573075168.4055
+    Average Loss: 0.2389
+    overall time: 308573076441.9598
+    Average Loss: 0.2376
+    overall time: 308573077711.1063
+    overall time: 0.0000
+    Average Loss: 0.2376
+    Average PSNR: 34.7150
+    Average SSIM: 0.8021
+    Average MSSSIM: 0.9952
+
+===> Epoch 11 starts:
+    Average Loss: 0.2298
+    overall time: 308573080035.7371
+    Average Loss: 0.2368
+    overall time: 308573081286.5682
+    Average Loss: 0.2369
+    overall time: 308573082558.8275
+    Average Loss: 0.2362
+    overall time: 308573083838.0370
+    Average Loss: 0.2366
+    overall time: 308573085122.5636
+    Average Loss: 0.2360
+    overall time: 308573086394.2418
+    Average Loss: 0.2367
+    overall time: 308573087665.8074
+    Average Loss: 0.2361
+    overall time: 308573088939.7171
+    Average Loss: 0.2370
+    overall time: 308573090209.9297
+    Average Loss: 0.2369
+    overall time: 308573091486.4715
+    overall time: 0.0000
+    Average Loss: 0.2369
+    Average PSNR: 34.8291
+    Average SSIM: 0.8120
+    Average MSSSIM: 0.9953
+
+===> Epoch 12 starts:
+    Average Loss: 0.2371
+    overall time: 308573093846.5509
+    Average Loss: 0.2358
+    overall time: 308573095122.8798
+    Average Loss: 0.2348
+    overall time: 308573096400.9010
+    Average Loss: 0.2353
+    overall time: 308573097663.2071
+    Average Loss: 0.2376
+    overall time: 308573098912.5948
+    Average Loss: 0.2362
+    overall time: 308573100166.8213
+    Average Loss: 0.2351
+    overall time: 308573101420.6819
+    Average Loss: 0.2361
+    overall time: 308573102666.8648
+    Average Loss: 0.2359
+    overall time: 308573103917.7627
+    Average Loss: 0.2357
+    overall time: 308573105180.7101
+    overall time: 0.0000
+    Average Loss: 0.2357
+    Average PSNR: 34.7908
+    Average SSIM: 0.8101
+    Average MSSSIM: 0.9953
+
+===> Epoch 13 starts:
+    Average Loss: 0.2412
+    overall time: 308573107535.6339
+    Average Loss: 0.2374
+    overall time: 308573108809.9763
+    Average Loss: 0.2364
+    overall time: 308573110077.1676
+    Average Loss: 0.2339
+    overall time: 308573111343.7379
+    Average Loss: 0.2342
+    overall time: 308573112605.6738
+    Average Loss: 0.2348
+    overall time: 308573113868.0295
+    Average Loss: 0.2348
+    overall time: 308573115120.1757
+    Average Loss: 0.2335
+    overall time: 308573116379.6355
+    Average Loss: 0.2347
+    overall time: 308573117639.1212
+    Average Loss: 0.2339
+    overall time: 308573118903.5339
+    overall time: 0.0000
+    Average Loss: 0.2339
+    Average PSNR: 34.7310
+    Average SSIM: 0.8137
+    Average MSSSIM: 0.9952
+
+===> Epoch 14 starts:
+    Average Loss: 0.2319
+    overall time: 308573121244.9923
+    Average Loss: 0.2328
+    overall time: 308573122528.0375
+    Average Loss: 0.2323
+    overall time: 308573123792.3069
+    Average Loss: 0.2306
+    overall time: 308573125060.1409
+    Average Loss: 0.2313
+    overall time: 308573126339.9008
+    Average Loss: 0.2324
+    overall time: 308573127635.6589
+    Average Loss: 0.2332
+    overall time: 308573128912.2953
+    Average Loss: 0.2333
+    overall time: 308573130183.1390
+    Average Loss: 0.2341
+    overall time: 308573131478.8531
+    Average Loss: 0.2333
+    overall time: 308573132767.7286
+    overall time: 0.0000
+    Average Loss: 0.2333
+    Average PSNR: 34.9362
+    Average SSIM: 0.8165
+    Average MSSSIM: 0.9954
+
+===> Epoch 15 starts:
+    Average Loss: 0.2239
+    overall time: 308573135147.9337
+    Average Loss: 0.2265
+    overall time: 308573136442.3476
+    Average Loss: 0.2281
+    overall time: 308573137734.0077
+    Average Loss: 0.2310
+    overall time: 308573139021.7659
+    Average Loss: 0.2314
+    overall time: 308573140308.5237
+    Average Loss: 0.2311
+    overall time: 308573141599.4072
+    Average Loss: 0.2308
+    overall time: 308573142864.5581
+    Average Loss: 0.2301
+    overall time: 308573144122.8159
+    Average Loss: 0.2309
+    overall time: 308573145394.5133
+    Average Loss: 0.2314
+    overall time: 308573146676.9583
+    overall time: 0.0000
+    Average Loss: 0.2314
+    Average PSNR: 34.7126
+    Average SSIM: 0.8169
+    Average MSSSIM: 0.9952
+
+===> Epoch 16 starts:
+    Average Loss: 0.2299
+    overall time: 308573149025.7522
+    Average Loss: 0.2290
+    overall time: 308573150290.4252
+    Average Loss: 0.2272
+    overall time: 308573151552.7294
+    Average Loss: 0.2288
+    overall time: 308573152806.2911
+    Average Loss: 0.2288
+    overall time: 308573154057.6840
+    Average Loss: 0.2291
+    overall time: 308573155308.0463
+    Average Loss: 0.2300
+    overall time: 308573156564.9474
+    Average Loss: 0.2298
+    overall time: 308573157833.7962
+    Average Loss: 0.2296
+    overall time: 308573159091.8607
+    Average Loss: 0.2302
+    overall time: 308573160360.0508
+    overall time: 0.0000
+    Average Loss: 0.2302
+    Average PSNR: 34.8890
+    Average SSIM: 0.8121
+    Average MSSSIM: 0.9954
+
+===> Epoch 17 starts:
+    Average Loss: 0.2320
+    overall time: 308573162697.2000
+    Average Loss: 0.2297
+    overall time: 308573163975.6425
+    Average Loss: 0.2343
+    overall time: 308573165228.8467
+    Average Loss: 0.2343
+    overall time: 308573166477.6161
+    Average Loss: 0.2319
+    overall time: 308573167738.6387
+    Average Loss: 0.2325
+    overall time: 308573168995.7168
+    Average Loss: 0.2320
+    overall time: 308573170262.6293
+    Average Loss: 0.2318
+    overall time: 308573171524.2712
+    Average Loss: 0.2313
+    overall time: 308573172796.6161
+    Average Loss: 0.2309
+    overall time: 308573174049.9840
+    overall time: 0.0000
+    Average Loss: 0.2309
+    Average PSNR: 34.9181
+    Average SSIM: 0.8097
+    Average MSSSIM: 0.9953
+
+===> Epoch 18 starts:
+    Average Loss: 0.2372
+    overall time: 308573176372.5376
+    Average Loss: 0.2351
+    overall time: 308573177633.4146
+    Average Loss: 0.2373
+    overall time: 308573178905.4727
+    Average Loss: 0.2370
+    overall time: 308573180182.1422
+    Average Loss: 0.2356
+    overall time: 308573181461.5405
+    Average Loss: 0.2346
+    overall time: 308573182733.3609
+    Average Loss: 0.2335
+    overall time: 308573183983.0514
+    Average Loss: 0.2327
+    overall time: 308573185262.6229
+    Average Loss: 0.2323
+    overall time: 308573186543.0555
+    Average Loss: 0.2315
+    overall time: 308573187813.6059
+    overall time: 0.0000
+    Average Loss: 0.2315
+    Average PSNR: 34.9299
+    Average SSIM: 0.8126
+    Average MSSSIM: 0.9954
+
+===> Epoch 19 starts:
+    Average Loss: 0.2311
+    overall time: 308573190155.2968
+    Average Loss: 0.2288
+    overall time: 308573191444.8685
+    Average Loss: 0.2264
+    overall time: 308573192720.9258
+    Average Loss: 0.2264
+    overall time: 308573193994.5773
+    Average Loss: 0.2279
+    overall time: 308573195260.2066
+    Average Loss: 0.2278
+    overall time: 308573196530.8167
+    Average Loss: 0.2278
+    overall time: 308573197797.6681
+    Average Loss: 0.2277
+    overall time: 308573199078.3676
+    Average Loss: 0.2287
+    overall time: 308573200349.8987
+    Average Loss: 0.2286
+    overall time: 308573201617.5058
+    overall time: 0.0000
+    Average Loss: 0.2286
+    Average PSNR: 35.0120
+    Average SSIM: 0.8197
+    Average MSSSIM: 0.9955
+
+===> Epoch 20 starts:
+    Average Loss: 0.2237
+    overall time: 308573203971.2997
+    Average Loss: 0.2255
+    overall time: 308573205231.1196
+    Average Loss: 0.2269
+    overall time: 308573206487.1453
+    Average Loss: 0.2263
+    overall time: 308573207746.9189
+    Average Loss: 0.2287
+    overall time: 308573209017.5752
+    Average Loss: 0.2277
+    overall time: 308573210288.9202
+    Average Loss: 0.2278
+    overall time: 308573211563.6932
+    Average Loss: 0.2277
+    overall time: 308573212851.6050
+    Average Loss: 0.2277
+    overall time: 308573214130.7034
+    Average Loss: 0.2275
+    overall time: 308573215394.2982
+    overall time: 0.0000
+    Average Loss: 0.2275
+    Average PSNR: 34.9808
+    Average SSIM: 0.8211
+    Average MSSSIM: 0.9954
+
+===> Epoch 21 starts:
+    Average Loss: 0.2364
+    overall time: 308573217732.6105
+    Average Loss: 0.2301
+    overall time: 308573218991.5225
+    Average Loss: 0.2303
+    overall time: 308573220267.5267
+    Average Loss: 0.2268
+    overall time: 308573221543.8860
+    Average Loss: 0.2267
+    overall time: 308573222816.4355
+    Average Loss: 0.2267
+    overall time: 308573224075.2189
+    Average Loss: 0.2268
+    overall time: 308573225326.2860
+    Average Loss: 0.2272
+    overall time: 308573226603.6107
+    Average Loss: 0.2274
+    overall time: 308573227900.8518
+    Average Loss: 0.2273
+    overall time: 308573229182.7179
+    overall time: 0.0000
+    Average Loss: 0.2273
+    Average PSNR: 34.9406
+    Average SSIM: 0.8179
+    Average MSSSIM: 0.9954
+
+===> Epoch 22 starts:
+    Average Loss: 0.2365
+    overall time: 308573231514.4487
+    Average Loss: 0.2294
+    overall time: 308573232779.6625
+    Average Loss: 0.2282
+    overall time: 308573234041.9409
+    Average Loss: 0.2298
+    overall time: 308573235317.7043
+    Average Loss: 0.2295
+    overall time: 308573236589.0370
+    Average Loss: 0.2278
+    overall time: 308573237862.0688
+    Average Loss: 0.2280
+    overall time: 308573239142.6772
+    Average Loss: 0.2273
+    overall time: 308573240412.7081
+    Average Loss: 0.2262
+    overall time: 308573241680.5390
+    Average Loss: 0.2268
+    overall time: 308573242950.9401
+    overall time: 0.0000
+    Average Loss: 0.2268
+    Average PSNR: 35.0842
+    Average SSIM: 0.8201
+    Average MSSSIM: 0.9955
+
+===> Epoch 23 starts:
+    Average Loss: 0.2188
+    overall time: 308573245278.6637
+    Average Loss: 0.2224
+    overall time: 308573246557.8221
+    Average Loss: 0.2258
+    overall time: 308573247833.9249
+    Average Loss: 0.2238
+    overall time: 308573249107.6993
+    Average Loss: 0.2242
+    overall time: 308573250379.6672
+    Average Loss: 0.2248
+    overall time: 308573251650.8144
+    Average Loss: 0.2248
+    overall time: 308573252933.7653
+    Average Loss: 0.2244
+    overall time: 308573254206.6414
+    Average Loss: 0.2234
+    overall time: 308573255469.4093
+    Average Loss: 0.2233
+    overall time: 308573256745.0405
+    overall time: 0.0000
+    Average Loss: 0.2233
+    Average PSNR: 35.0508
+    Average SSIM: 0.8127
+    Average MSSSIM: 0.9955
+
+===> Epoch 24 starts:
+    Average Loss: 0.2302
+    overall time: 308573259370.5391
+    Average Loss: 0.2341
+    overall time: 308573260637.5676
+    Average Loss: 0.2288
+    overall time: 308573261906.1190
+    Average Loss: 0.2264
+    overall time: 308573263182.5774
+    Average Loss: 0.2275
+    overall time: 308573264470.4403
+    Average Loss: 0.2270
+    overall time: 308573265753.4391
+    Average Loss: 0.2265
+    overall time: 308573267033.2534
+    Average Loss: 0.2269
+    overall time: 308573268307.4487
+    Average Loss: 0.2270
+    overall time: 308573269574.6776
+    Average Loss: 0.2275
+    overall time: 308573270846.3838
+    overall time: 0.0000
+    Average Loss: 0.2275
+    Average PSNR: 35.0523
+    Average SSIM: 0.8205
+    Average MSSSIM: 0.9955
+
+===> Epoch 25 starts:
+    Average Loss: 0.2278
+    overall time: 308573273419.8771
+    Average Loss: 0.2272
+    overall time: 308573274690.1638
+    Average Loss: 0.2250
+    overall time: 308573275957.6016
+    Average Loss: 0.2279
+    overall time: 308573277223.2473
+    Average Loss: 0.2291
+    overall time: 308573278494.3291
+    Average Loss: 0.2288
+    overall time: 308573279772.4565
+    Average Loss: 0.2289
+    overall time: 308573281041.6360
+    Average Loss: 0.2291
+    overall time: 308573282305.1605
+    Average Loss: 0.2285
+    overall time: 308573283570.7052
+    Average Loss: 0.2285
+    overall time: 308573284851.0356
+    overall time: 0.0000
+    Average Loss: 0.2285
+    Average PSNR: 35.0507
+    Average SSIM: 0.8187
+    Average MSSSIM: 0.9955
+
+===> Epoch 26 starts:
+    Average Loss: 0.2307
+    overall time: 308573287486.3362
+    Average Loss: 0.2265
+    overall time: 308573288763.0848
+    Average Loss: 0.2261
+    overall time: 308573290060.1481
+    Average Loss: 0.2287
+    overall time: 308573291357.5970
+    Average Loss: 0.2273
+    overall time: 308573292655.1411
+    Average Loss: 0.2272
+    overall time: 308573293934.5515
+    Average Loss: 0.2269
+    overall time: 308573295196.6900
+    Average Loss: 0.2269
+    overall time: 308573296467.3681
+    Average Loss: 0.2266
+    overall time: 308573297728.7020
+    Average Loss: 0.2262
+    overall time: 308573298987.9482
+    overall time: 0.0000
+    Average Loss: 0.2262
+    Average PSNR: 35.0885
+    Average SSIM: 0.8263
+    Average MSSSIM: 0.9956
+
+===> Epoch 27 starts:
+    Average Loss: 0.2311
+    overall time: 308573301557.0074
+    Average Loss: 0.2278
+    overall time: 308573302827.9696
+    Average Loss: 0.2271
+    overall time: 308573304095.7490
+    Average Loss: 0.2270
+    overall time: 308573305357.8764
+    Average Loss: 0.2251
+    overall time: 308573306637.9462
+    Average Loss: 0.2245
+    overall time: 308573307907.3861
+    Average Loss: 0.2249
+    overall time: 308573309173.1876
+    Average Loss: 0.2242
+    overall time: 308573310439.7474
+    Average Loss: 0.2243
+    overall time: 308573311717.9991
+    Average Loss: 0.2246
+    overall time: 308573312995.8563
+    overall time: 0.0000
+    Average Loss: 0.2246
+    Average PSNR: 35.1486
+    Average SSIM: 0.8241
+    Average MSSSIM: 0.9956
+
+===> Epoch 28 starts:
+    Average Loss: 0.2203
+    overall time: 308573315521.4415
+    Average Loss: 0.2277
+    overall time: 308573316802.0955
+    Average Loss: 0.2249
+    overall time: 308573318066.1340
+    Average Loss: 0.2254
+    overall time: 308573319298.5812
+    Average Loss: 0.2258
+    overall time: 308573320555.5575
+    Average Loss: 0.2258
+    overall time: 308573321853.0627
+    Average Loss: 0.2254
+    overall time: 308573323141.8760
+    Average Loss: 0.2254
+    overall time: 308573324416.2061
+    Average Loss: 0.2249
+    overall time: 308573325679.1424
+    Average Loss: 0.2252
+    overall time: 308573326950.3560
+    overall time: 0.0000
+    Average Loss: 0.2252
+    Average PSNR: 35.0941
+    Average SSIM: 0.8225
+    Average MSSSIM: 0.9955
+
+===> Epoch 29 starts:
+    Average Loss: 0.2231
+    overall time: 308573329465.0001
+    Average Loss: 0.2280
+    overall time: 308573330760.0833
+    Average Loss: 0.2290
+    overall time: 308573332039.8805
+    Average Loss: 0.2260
+    overall time: 308573333303.1023
+    Average Loss: 0.2269
+    overall time: 308573334575.3513
+    Average Loss: 0.2260
+    overall time: 308573335845.1879
+    Average Loss: 0.2251
+    overall time: 308573337116.1444
+    Average Loss: 0.2246
+    overall time: 308573338387.6311
+    Average Loss: 0.2262
+    overall time: 308573339645.0187
+    Average Loss: 0.2263
+    overall time: 308573340913.1906
+    overall time: 0.0000
+    Average Loss: 0.2263
+    Average PSNR: 35.1618
+    Average SSIM: 0.8231
+    Average MSSSIM: 0.9956
+
+===> Epoch 30 starts:
+    Average Loss: 0.2286
+    overall time: 308573343478.6902
+    Average Loss: 0.2282
+    overall time: 308573344768.1342
+    Average Loss: 0.2283
+    overall time: 308573346041.8994
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.8724
+    overall time: 4.0546
+    Average Loss: 0.6649
+    overall time: 4.1717
+    Average Loss: 0.5720
+    overall time: 4.2633
+    Average Loss: 0.5184
+    overall time: 4.0932
+    Average Loss: 0.4806
+    overall time: 4.0285
+    Average Loss: 0.4550
+    overall time: 4.0084
+    Average Loss: 0.4367
+    overall time: 4.1536
+    Average Loss: 0.4200
+    overall time: 4.0975
+    Average Loss: 0.4070
+    overall time: 4.0667
+    Average Loss: 0.3972
+    overall time: 4.0768
+    overall time: 0.0000
+    Average Loss: 0.3972
+    Average PSNR: 33.1881
+    Average SSIM: 0.7789
+    Average MSSSIM: 0.9927
+
+===> Epoch 1 starts:
+    Average Loss: 0.2776
+    overall time: 4.0491
+    Average Loss: 0.2782
+    overall time: 4.0332
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.8720
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.8468
+    overall time: 4.0084 + 0.0000
+    Average Loss: 0.6602
+    overall time: 4.0030 + 0.0000
+    Average Loss: 0.5699
+    overall time: 4.0212 + 0.0000
+    Average Loss: 0.5153
+    overall time: 3.9814 + 0.0000
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.8294
+    overall time: 4.0846 + 3.1078
+    Average Loss: 0.6478
+    overall time: 4.0720 + 5.1433
+    Average Loss: 0.5634
+    overall time: 4.0913 + 7.1789
+    Average Loss: 0.5090
+    overall time: 4.0237 + 9.2295
+    Average Loss: 0.4741
+    overall time: 4.0708 + 11.2825
+    Average Loss: 0.4479
+    overall time: 4.0766 + 13.3438
+    Average Loss: 0.4290
+    overall time: 4.1331 + 15.4165
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 0.8674    overall time: 4.1338 + 3.1592
+    Average Loss: 0.6647    overall time: 4.0368 + 5.2355
+lr : 0.0001
+
+===> Epoch 0 starts:
+    overall time: 67.5712
+    Average Loss: 1.2219
+
+===> Epoch 1 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 2.2196    overall time: 13.4599 + 1.2678
+    Average Loss: 1.7066    overall time: 13.7902 + 1.4903
+    Average Loss: 1.4340    overall time: 13.2557 + 1.7121
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 2.2040    overall time: 13.4461 + 1.2880
+    Average Loss: 1.7317    overall time: 13.6352 + 1.5118
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    overall time: 0.1747
+    Average Loss: 4.1590
+
+===> Epoch 1 starts:
+    overall time: 0.1247
+    Average Loss: 2.9601
+
+===> Epoch 2 starts:
+    overall time: 0.1234
+    Average Loss: 2.4601
+
+===> Epoch 3 starts:
+    overall time: 0.1231
+    Average Loss: 2.0167
+
+===> Epoch 4 starts:
+    overall time: 0.1233
+    Average Loss: 1.9315
+
+===> Epoch 5 starts:
+    overall time: 0.1231
+    Average Loss: 1.7878
+
+===> Epoch 6 starts:
+    overall time: 0.1232
+    Average Loss: 1.4046
+
+===> Epoch 7 starts:
+    overall time: 0.1233
+    Average Loss: 1.4437
+
+===> Epoch 8 starts:
+    overall time: 0.1237
+    Average Loss: 1.4905
+
+===> Epoch 9 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    overall time: 0.0953
+    Average Loss: 4.1496
+
+===> Epoch 1 starts:
+    overall time: 0.0936
+    Average Loss: 3.2279
+
+===> Epoch 2 starts:
+    overall time: 0.0918
+    Average Loss: 2.3729
+
+===> Epoch 3 starts:
+    overall time: 0.0887
+    Average Loss: 1.7971
+
+===> Epoch 4 starts:
+    overall time: 0.0901
+    Average Loss: 2.0816
+
+===> Epoch 5 starts:
+    overall time: 0.0906
+    Average Loss: 1.7820
+lr : 0.0001
+
+===> Epoch 0 starts:
+    overall time: 0.0926
+    Average Loss: 3.9442
+
+===> Epoch 1 starts:
+    overall time: 0.0868
+    Average Loss: 3.0935
+
+===> Epoch 2 starts:
+    overall time: 0.0875
+    Average Loss: 2.4231
+
+===> Epoch 3 starts:
+    overall time: 0.0862
+    Average Loss: 1.8599
+
+===> Epoch 4 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 1.8708    overall time: 0.6847 + 1.8650
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 1.8843    overall time: 0.5852 + 1.8411
+    Average Loss: 1.4806    overall time: 0.5810 + 2.6716
+    Average Loss: 1.2867    overall time: 0.5628 + 3.4982
+    Average Loss: 1.1572    overall time: 0.5705 + 4.3562
+    Average Loss: 1.0673    overall time: 0.5706 + 5.2784
+    Average Loss: 1.0013    overall time: 0.5700 + 6.2277
+    Average Loss: 0.9516    overall time: 0.5907 + 7.2366
+    Average Loss: 0.9080    overall time: 0.5802 + 8.2523
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 1.1742    overall time: 2.3010 + 4.3641
+    Average Loss: 0.9313    overall time: 2.2990 + 8.1801
+    Average Loss: 0.8399    overall time: 2.3226 + 12.0595
+    Average Loss: 0.7810    overall time: 2.6544 + 16.4528
+    Average Loss: 0.7394    overall time: 3.2959 + 21.3486
+    Average Loss: 0.7062    overall time: 3.3161 + 26.3833
+    Average Loss: 0.6836    overall time: 2.9720 + 31.2327
+    Average Loss: 0.6659    overall time: 2.3346 + 35.6270
+    Average Loss: 0.6520    overall time: 2.3635 + 39.9829
+    overall time: 1.0454
+    Average Loss: 0.6477
+
+===> Epoch 1 starts:
+    Average Loss: 0.5205    overall time: 2.5603 + 4.6039
+    Average Loss: 0.5226    overall time: 2.6890 + 9.3259
+lr : 0.0001
+
+===> Epoch 0 starts:
+    Average Loss: 1.0847    overall time: 2.2918 + 1.8677
+    Average Loss: 0.8685    overall time: 2.2998 + 0.8147
+    Average Loss: 0.7800    overall time: 2.3161 + 0.8077
+    Average Loss: 0.7268    overall time: 2.3031 + 0.8110
+    Average Loss: 0.6909    overall time: 2.3225 + 0.8126
+    Average Loss: 0.6643    overall time: 2.3229 + 0.8136
+    Average Loss: 0.6444    overall time: 2.2951 + 0.8103
+    Average Loss: 0.6323    overall time: 2.2785 + 0.8108
+    Average Loss: 0.6220    overall time: 2.3089 + 0.8215
+    overall time: 1.1602
+    Average Loss: 0.6217
+    Average PSNR: 30.6161
+    Average SSIM: 0.6743
+    Average MSSSIM: 0.9804
+
+===> Epoch 1 starts:
+    Average Loss: 0.5109    overall time: 3.2226 + 0.8849
+lr : 0.0001
+
+===> Epoch 0 starts:
+[40/378]    Average Loss: 1.1377    overall time: 2.3276 + 1.9342
+[80/378]    Average Loss: 0.9184    overall time: 2.3204 + 0.8140
+[120/378]    Average Loss: 0.8234    overall time: 2.3173 + 0.8179
+[160/378]    Average Loss: 0.7672    overall time: 2.3001 + 0.8208
+[200/378]    Average Loss: 0.7331    overall time: 2.3174 + 0.8136
+[240/378]    Average Loss: 0.7015    overall time: 2.3195 + 0.8143
+[280/378]    Average Loss: 0.6766    overall time: 2.2944 + 0.8216
+[320/378]    Average Loss: 0.6582    overall time: 2.2838 + 0.8205
+[360/378]    Average Loss: 0.6441    overall time: 2.3148 + 0.8187
+    overall time: 1.0155
+    Average Loss: 0.6397
+    Average PSNR: 30.3243
+    Average SSIM: 0.6621
+    Average MSSSIM: 0.9790
+
+===> Epoch 1 starts:
+[40/378]    Average Loss: 0.5125    overall time: 2.3187 + 0.8300
+[80/378]    Average Loss: 0.5137    overall time: 2.3160 + 0.8177
+[120/378]    Average Loss: 0.5164    overall time: 2.2573 + 0.8223
+[160/378]    Average Loss: 0.5221    overall time: 2.2764 + 0.8292
+[200/378]    Average Loss: 0.5184    overall time: 2.3253 + 0.8241
+[240/378]    Average Loss: 0.5180    overall time: 2.3171 + 0.8179
+[280/378]    Average Loss: 0.5148    overall time: 2.3550 + 0.8204
+[320/378]    Average Loss: 0.5144    overall time: 2.3502 + 0.8215
+[360/378]    Average Loss: 0.5131    overall time: 2.3507 + 0.8261
+    overall time: 1.0249
+    Average Loss: 0.5146
+    Average PSNR: 30.8130
+    Average SSIM: 0.6837
+    Average MSSSIM: 0.9813
+
+===> Epoch 2 starts:
+[40/378]    Average Loss: 0.4879    overall time: 2.4009 + 0.8307
+[80/378]    Average Loss: 0.4918    overall time: 2.3374 + 0.8321
+[120/378]    Average Loss: 0.4927    overall time: 2.3785 + 0.8287
+[160/378]    Average Loss: 0.4912    overall time: 2.3409 + 0.8215
+[200/378]    Average Loss: 0.4874    overall time: 2.3430 + 0.8207
+[240/378]    Average Loss: 0.4882    overall time: 2.2974 + 0.8235
+[280/378]    Average Loss: 0.4883    overall time: 2.3040 + 0.8218
+[320/378]    Average Loss: 0.4924    overall time: 2.3433 + 0.8247
+[360/378]    Average Loss: 0.4944    overall time: 2.3465 + 0.8275
+    overall time: 1.0523
+    Average Loss: 0.4962
+    Average PSNR: 30.6929
+    Average SSIM: 0.6895
+    Average MSSSIM: 0.9813
+
+===> Epoch 3 starts:
+[40/378]    Average Loss: 0.5115    overall time: 2.4297 + 0.8306
+[80/378]    Average Loss: 0.5038    overall time: 2.4111 + 0.8297
+[120/378]    Average Loss: 0.5015    overall time: 2.4293 + 0.8347
+[160/378]    Average Loss: 0.4980    overall time: 2.3995 + 0.8272
+[200/378]    Average Loss: 0.4984    overall time: 2.4225 + 0.8288
+[240/378]    Average Loss: 0.4991    overall time: 2.3514 + 0.8285
+[280/378]    Average Loss: 0.4988    overall time: 2.3394 + 0.8294
+lr : 0.0001
+
+===> Epoch 0 starts:
+[40/378]    Average Loss: 1.1385    overall time: 3.2395 + 1.9665
+[80/378]    Average Loss: 0.9133    overall time: 3.2643 + 0.8876
+[120/378]    Average Loss: 0.8187    overall time: 3.2921 + 0.8862
+[160/378]    Average Loss: 0.7642    overall time: 3.2676 + 0.8873
+[200/378]    Average Loss: 0.7317    overall time: 3.2971 + 0.8849
+[240/378]    Average Loss: 0.6996    overall time: 3.2984 + 0.8880
+[280/378]    Average Loss: 0.6752    overall time: 3.2590 + 0.8847
+[320/378]    Average Loss: 0.6584    overall time: 3.2390 + 0.8873
+[360/378]    Average Loss: 0.6454    overall time: 3.2902 + 0.8851
+[378/378]    Average Loss: 0.6396    overall time: 1.4293 + 0.4446
+    Average PSNR: 30.5293
+    Average SSIM: 0.6722
+    Average MSSSIM: 0.9802
+
+===> Epoch 1 starts:
+[40/378]    Average Loss: 0.5102    overall time: 3.2556 + 0.8892
+[80/378]    Average Loss: 0.5209    overall time: 3.2842 + 0.8929
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  40/ 378]    Average Loss: 1.0839    overall time: 2.3149 + 1.9037
+[  80/ 378]    Average Loss: 0.8789    overall time: 2.2998 + 0.8204
+[ 120/ 378]    Average Loss: 0.7947    overall time: 2.3259 + 0.8232
+[ 160/ 378]    Average Loss: 0.7486    overall time: 2.3017 + 0.8221
+[ 200/ 378]    Average Loss: 0.7192    overall time: 2.6860 + 0.8684
+[ 240/ 378]    Average Loss: 0.6867    overall time: 3.1370 + 0.8904
+[ 280/ 378]    Average Loss: 0.6646    overall time: 2.3437 + 0.8302
+[ 320/ 378]    Average Loss: 0.6490    overall time: 3.1045 + 0.8855
+[ 360/ 378]    Average Loss: 0.6356    overall time: 3.2637 + 0.8916
+[ 378/ 378]    Average Loss: 0.6336    overall time: 1.0376 + 0.4385
+    Average PSNR: 30.4267
+    Average SSIM: 0.6647
+    Average MSSSIM: 0.9799
+
+===> Epoch 1 starts:
+[  40/ 378]    Average Loss: 0.4949    overall time: 2.3356 + 0.8680
+[  80/ 378]    Average Loss: 0.5064    overall time: 2.3634 + 0.8680
+[ 120/ 378]    Average Loss: 0.5093    overall time: 2.3144 + 0.8715
+[ 160/ 378]    Average Loss: 0.5135    overall time: 2.3368 + 0.8680
+[ 200/ 378]    Average Loss: 0.5139    overall time: 2.3703 + 0.8706
+[ 240/ 378]    Average Loss: 0.5165    overall time: 2.3630 + 0.8677
+[ 280/ 378]    Average Loss: 0.5168    overall time: 2.4416 + 0.8774
+[ 320/ 378]    Average Loss: 0.5136    overall time: 2.3833 + 0.8646
+[ 360/ 378]    Average Loss: 0.5124    overall time: 2.3795 + 0.8731
+[ 378/ 378]    Average Loss: 0.5122    overall time: 1.0398 + 0.3765
+    Average PSNR: 30.8105
+    Average SSIM: 0.6746
+    Average MSSSIM: 0.9813
+
+===> Epoch 2 starts:
+[  40/ 378]    Average Loss: 0.5060    overall time: 2.3728 + 0.8683
+[  80/ 378]    Average Loss: 0.4956    overall time: 2.3731 + 0.8727
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  40/ 378]    Average Loss: 1.1599    overall time: 2.3106 + 1.8746
+[  80/ 378]    Average Loss: 0.9178    overall time: 2.3053 + 0.8164
+[ 120/ 378]    Average Loss: 0.8256    overall time: 2.3214 + 0.8118
+[ 160/ 378]    Average Loss: 0.7708    overall time: 2.3063 + 0.8154
+[ 200/ 378]    Average Loss: 0.7314    overall time: 2.3560 + 0.8191
+[ 240/ 378]    Average Loss: 0.6984    overall time: 2.3299 + 0.8152
+[ 280/ 378]    Average Loss: 0.6736    overall time: 2.2981 + 0.8154
+[ 320/ 378]    Average Loss: 0.6580    overall time: 2.2830 + 0.8158
+[ 360/ 378]    Average Loss: 0.6431    overall time: 2.3166 + 0.8124
+[ 378/ 378]    Average Loss: 0.6403    overall time: 1.0164 + 0.4121
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
