@@ -4739,3 +4739,14 @@ Average MSSSIM: 0.9899
 [ 320/ 378]    Average Loss: 0.4731    overall time: 2.3471 + 0.8360
 [ 360/ 378]    Average Loss: 0.4702    overall time: 2.3192 + 0.8321
 [ 378/ 378]    Average Loss: 0.4702    overall time: 1.0157 + 0.3628
+Average PSNR: 29.6508
+Average SSIM: 0.7028
+Average MSSSIM: 0.9907
+
+===> Epoch 31 starts:
+[  40/ 378]    Average Loss: 0.4766    overall time: 3.0223 + 0.8834
+[  80/ 378]    Average Loss: 0.4777    overall time: 3.2121 + 0.9023
+[ 120/ 378]    Average Loss: 0.4739    overall time: 3.2571 + 0.9008
+[ 160/ 378]    Average Loss: 0.4724    overall time: 3.3105 + 0.9015
+[ 200/ 378]    Average Loss: 0.4720    overall time: 3.2758 + 0.8959
+[ 240/ 378]    Average Loss: 0.4664    overall time: 3.2487 + 0.8989
