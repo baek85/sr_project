@@ -4700,3 +4700,42 @@ Average MSSSIM: 0.9899
 [ 200/ 378]    Average Loss: 0.4713    overall time: 2.3398 + 0.8294
 [ 240/ 378]    Average Loss: 0.4686    overall time: 2.3109 + 0.8322
 [ 280/ 378]    Average Loss: 0.4668    overall time: 2.3035 + 0.8315
+[ 320/ 378]    Average Loss: 0.4684    overall time: 2.3353 + 0.8393
+[ 360/ 378]    Average Loss: 0.4707    overall time: 2.3898 + 0.8412
+[ 378/ 378]    Average Loss: 0.4744    overall time: 1.0283 + 0.3626
+
+===> Epoch 28 starts:
+[  40/ 378]    Average Loss: 0.4712    overall time: 2.3218 + 0.8311
+[  80/ 378]    Average Loss: 0.4718    overall time: 2.3667 + 0.8394
+[ 120/ 378]    Average Loss: 0.4683    overall time: 2.3254 + 0.8349
+[ 160/ 378]    Average Loss: 0.4681    overall time: 2.3347 + 0.8369
+[ 200/ 378]    Average Loss: 0.4699    overall time: 2.3894 + 0.8355
+[ 240/ 378]    Average Loss: 0.4726    overall time: 2.3540 + 0.8387
+[ 280/ 378]    Average Loss: 0.4744    overall time: 2.3557 + 0.8419
+[ 320/ 378]    Average Loss: 0.4778    overall time: 2.3489 + 0.8395
+[ 360/ 378]    Average Loss: 0.4787    overall time: 2.4082 + 0.8365
+[ 378/ 378]    Average Loss: 0.4790    overall time: 1.0274 + 0.3638
+
+===> Epoch 29 starts:
+[  40/ 378]    Average Loss: 0.4736    overall time: 2.3810 + 0.8483
+[  80/ 378]    Average Loss: 0.4666    overall time: 2.3182 + 0.8346
+[ 120/ 378]    Average Loss: 0.4688    overall time: 2.3321 + 0.8378
+[ 160/ 378]    Average Loss: 0.4648    overall time: 2.3556 + 0.8353
+[ 200/ 378]    Average Loss: 0.4728    overall time: 2.4248 + 0.8368
+[ 240/ 378]    Average Loss: 0.4730    overall time: 2.3473 + 0.8391
+[ 280/ 378]    Average Loss: 0.4732    overall time: 2.3436 + 0.8314
+[ 320/ 378]    Average Loss: 0.4760    overall time: 2.3475 + 0.8422
+[ 360/ 378]    Average Loss: 0.4750    overall time: 2.3015 + 0.8380
+[ 378/ 378]    Average Loss: 0.4754    overall time: 1.0005 + 0.3650
+
+===> Epoch 30 starts:
+[  40/ 378]    Average Loss: 0.4812    overall time: 2.3346 + 0.8316
+[  80/ 378]    Average Loss: 0.4842    overall time: 2.3537 + 0.8313
+[ 120/ 378]    Average Loss: 0.4819    overall time: 2.3203 + 0.8291
+[ 160/ 378]    Average Loss: 0.4739    overall time: 2.3342 + 0.8302
+[ 200/ 378]    Average Loss: 0.4729    overall time: 2.3429 + 0.8391
+[ 240/ 378]    Average Loss: 0.4742    overall time: 2.3703 + 0.8366
+[ 280/ 378]    Average Loss: 0.4743    overall time: 2.3536 + 0.8390
+[ 320/ 378]    Average Loss: 0.4731    overall time: 2.3471 + 0.8360
+[ 360/ 378]    Average Loss: 0.4702    overall time: 2.3192 + 0.8321
+[ 378/ 378]    Average Loss: 0.4702    overall time: 1.0157 + 0.3628
