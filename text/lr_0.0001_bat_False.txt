@@ -4616,3 +4616,20 @@ Average MSSSIM: 0.9894
 [ 320/ 378]    Average Loss: 0.4786    overall time: 2.3197 + 0.8488
 [ 360/ 378]    Average Loss: 0.4775    overall time: 2.3361 + 0.8402
 [ 378/ 378]    Average Loss: 0.4777    overall time: 1.0265 + 0.3621
+Average PSNR: 29.4173
+Average SSIM: 0.6935
+Average MSSSIM: 0.9899
+
+===> Epoch 21 starts:
+[  40/ 378]    Average Loss: 0.4688    overall time: 2.3361 + 0.8302
+[  80/ 378]    Average Loss: 0.4685    overall time: 2.3327 + 0.8290
+[ 120/ 378]    Average Loss: 0.4671    overall time: 2.3010 + 0.8298
+[ 160/ 378]    Average Loss: 0.4728    overall time: 2.3281 + 0.8292
+[ 200/ 378]    Average Loss: 0.4688    overall time: 2.2830 + 0.8301
+[ 240/ 378]    Average Loss: 0.4716    overall time: 2.3299 + 0.8342
+[ 280/ 378]    Average Loss: 0.4750    overall time: 2.3282 + 0.8345
+[ 320/ 378]    Average Loss: 0.4769    overall time: 2.3524 + 0.8330
+[ 360/ 378]    Average Loss: 0.4779    overall time: 2.3690 + 0.8435
+[ 378/ 378]    Average Loss: 0.4795    overall time: 1.0478 + 0.3642
+
+===> Epoch 22 starts:
