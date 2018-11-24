@@ -237,7 +237,8 @@ class Trainer(object):
             if not self.args.test_only:
                 self.train()
                 self.scheduler.step(epoch)
-                self.test()
+                if self.epoch % self.args.test_every == 0:
+                    self.test()
                 self.save() 
                 
             if self.args.test_only:

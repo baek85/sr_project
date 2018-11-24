@@ -49,9 +49,9 @@ parser.add_argument('--dilation', action='store_true',
                     help='use dilated convolution')
 
 # Training
-parser.add_argument('--test_every', type=int, default=1000, 
+parser.add_argument('--test_every', type=int, default=10, 
                     help='test images every n iters')
-parser.add_argument('--epochs', type=int, default=300,
+parser.add_argument('--epochs', type=int, default=1000,
                     help='number of epochs to train')
 parser.add_argument('--batch_size', type=int, default=16,
                     help='input batch size for training')
@@ -61,7 +61,7 @@ parser.add_argument('--test_only', action='store_true',
 # Optimization
 parser.add_argument('--lr', type=float, default=1e-4,
                     help='learning rate')
-parser.add_argument('--lr_decay', type=int, default=200,
+parser.add_argument('--lr_decay', type=int, default=500,
                     help='learning rate decay per N epochs')
 parser.add_argument('--decay_type', type=str, default='step',
                     help='learning rate decay type')

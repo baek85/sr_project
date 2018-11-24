@@ -4283,3 +4283,70 @@ lr : 0.0001
 lr : 0.0001
 
 ===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  10/ 378]    Average Loss: 1.8104    overall time: 0.6053 + 1.3412
+[  20/ 378]    Average Loss: 1.4763    overall time: 0.5872 + 0.2023
+[  30/ 378]    Average Loss: 1.2819    overall time: 0.5625 + 0.2055
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  40/ 378]    Average Loss: 1.1298    overall time: 2.2894 + 1.8675
+[  80/ 378]    Average Loss: 0.9051    overall time: 2.2926 + 0.8183
+[ 120/ 378]    Average Loss: 0.8145    overall time: 2.3117 + 0.8198
+[ 160/ 378]    Average Loss: 0.7640    overall time: 2.3410 + 0.8238
+[ 200/ 378]    Average Loss: 0.7227    overall time: 2.3195 + 0.8247
+[ 240/ 378]    Average Loss: 0.6918    overall time: 3.1217 + 0.8777
+[ 280/ 378]    Average Loss: 0.6695    overall time: 3.2543 + 0.8865
+[ 320/ 378]    Average Loss: 0.6534    overall time: 3.2271 + 0.8851
+[ 360/ 378]    Average Loss: 0.6414    overall time: 3.2735 + 0.8883
+[ 378/ 378]    Average Loss: 0.6367    overall time: 1.4225 + 0.4423
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  40/ 378]    Average Loss: 1.1441    overall time: 2.3431 + 1.9416
+[  80/ 378]    Average Loss: 0.9198    overall time: 2.3426 + 0.8521
+[ 120/ 378]    Average Loss: 0.8294    overall time: 2.3595 + 0.8564
+[ 160/ 378]    Average Loss: 0.7712    overall time: 2.3631 + 0.8611
+[ 200/ 378]    Average Loss: 0.7343    overall time: 2.3815 + 0.8567
+[ 240/ 378]    Average Loss: 0.7036    overall time: 2.3871 + 0.8522
+[ 280/ 378]    Average Loss: 0.6797    overall time: 2.3409 + 0.8584
+[ 320/ 378]    Average Loss: 0.6616    overall time: 2.3255 + 0.8545
+[ 360/ 378]    Average Loss: 0.6469    overall time: 2.3682 + 0.8579
+[ 378/ 378]    Average Loss: 0.6445    overall time: 1.0581 + 0.4332
+lr : 0.0001
+
+===> Epoch 0 starts:
+Average PSNR: 28.2461
+Average SSIM: 0.6252
+Average MSSSIM: 0.9859
+
+===> Epoch 1 starts:
+[  40/ 378]    Average Loss: 0.5300    overall time: 3.5827 + 0.9834
+[  80/ 378]    Average Loss: 0.5229    overall time: 3.6254 + 0.9630
+[ 120/ 378]    Average Loss: 0.5209    overall time: 3.3693 + 0.9515
+[ 160/ 378]    Average Loss: 0.5244    overall time: 3.5302 + 0.9535
+[ 200/ 378]    Average Loss: 0.5195    overall time: 3.5174 + 0.9534
+[ 240/ 378]    Average Loss: 0.5177    overall time: 3.5413 + 0.9652
+[ 280/ 378]    Average Loss: 0.5165    overall time: 3.7095 + 0.9830
+[ 320/ 378]    Average Loss: 0.5122    overall time: 3.5455 + 0.9634
+[ 360/ 378]    Average Loss: 0.5127    overall time: 3.6509 + 0.9932
+[ 378/ 378]    Average Loss: 0.5118    overall time: 1.5621 + 0.4269
+
+===> Epoch 2 starts:
+[  40/ 378]    Average Loss: 0.5200    overall time: 3.5774 + 0.9761
+[  80/ 378]    Average Loss: 0.5141    overall time: 3.5376 + 0.9643
+[ 120/ 378]    Average Loss: 0.5089    overall time: 3.5527 + 0.9567
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  40/ 378]    Average Loss: 1.1920    overall time: 3.5476 + 2.1745
+[  80/ 378]    Average Loss: 0.9481    overall time: 3.6598 + 0.9976
+[ 120/ 378]    Average Loss: 0.8494    overall time: 3.6354 + 0.9502
