@@ -36,6 +36,7 @@ class DatasetFromFolder(data.Dataset):
         super(DatasetFromFolder, self).__init__()
         self.args = args
         self.train = train
+        self.name = name
         self.LR_filenames, self.HR_filenames = self._get_filenames(name)
         
         self.patch_size = args.patch_size
