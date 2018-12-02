@@ -4283,3 +4283,114 @@ lr : 0.0001
 lr : 0.0001
 
 ===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  40/  50]    Average Loss: 1.2340    overall time: 84.1296 + 1.1614
+[  50/  50]    Average Loss: 1.1398    overall time: 20.8015 + 0.2360
+Average PSNR: 26.7511
+Average SSIM: 0.4429
+Average MSSSIM: 0.9320
+
+===> Epoch 1 starts:
+[  40/  50]    Average Loss: 0.6609    overall time: 58.3319 + 0.9404
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  10/  50]    Average Loss: 2.0842    overall time: 18.0715 + 0.4546
+[  20/  50]    Average Loss: 1.5875    overall time: 14.2987 + 0.2345
+[  30/  50]    Average Loss: 1.3709    overall time: 13.5920 + 0.2392
+[  40/  50]    Average Loss: 1.2392    overall time: 13.6913 + 0.2419
+[  50/  50]    Average Loss: 1.1435    overall time: 14.4101 + 0.2446
+[  50/  50]    Average Loss: 1.1435    overall time: 0.0000 + 0.0000
+Average PSNR: 26.8028
+Average SSIM: 0.4404
+Average MSSSIM: 0.9360
+
+===> Epoch 1 starts:
+[  10/  50]    Average Loss: 0.6866    overall time: 15.2428 + 0.2402
+[  20/  50]    Average Loss: 0.6863    overall time: 14.2199 + 0.2408
+[  30/  50]    Average Loss: 0.6689    overall time: 13.9413 + 0.2419
+[  40/  50]    Average Loss: 0.6514    overall time: 15.6278 + 0.2393
+[  50/  50]    Average Loss: 0.6408    overall time: 16.1081 + 0.2547
+[  50/  50]    Average Loss: 0.6408    overall time: 0.0000 + 0.0000
+Average PSNR: 28.2284
+Average SSIM: 0.5565
+Average MSSSIM: 0.9588
+
+===> Epoch 2 starts:
+[  10/  50]    Average Loss: 0.6417    overall time: 18.5295 + 0.2664
+[  20/  50]    Average Loss: 0.6092    overall time: 14.6796 + 0.2397
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  10/  50]    Average Loss: 2.2446    overall time: 15.3547 + 0.4224
+[  20/  50]    Average Loss: 1.6682    overall time: 13.9432 + 0.2223
+[  30/  50]    Average Loss: 1.4178    overall time: 15.2891 + 0.2419
+[  40/  50]    Average Loss: 1.2463    overall time: 18.2497 + 0.2602
+[  50/  50]    Average Loss: 1.1310    overall time: 16.7508 + 0.2531
+[  50/  50]    Average Loss: 1.1310    overall time: 0.0000 + 0.0000
+Average PSNR: 26.9314
+Average SSIM: 0.4341
+Average MSSSIM: 0.9357
+
+===> Epoch 1 starts:
+[  10/  50]    Average Loss: 0.6594    overall time: 14.3199 + 0.2335
+[  20/  50]    Average Loss: 0.6529    overall time: 13.8192 + 0.2297
+[  30/  50]    Average Loss: 0.6540    overall time: 14.0300 + 0.2302
+[  40/  50]    Average Loss: 0.6458    overall time: 14.4931 + 0.2400
+[  50/  50]    Average Loss: 0.6324    overall time: 13.8042 + 0.2385
+[  50/  50]    Average Loss: 0.6324    overall time: 0.0000 + 0.0000
+Average PSNR: 28.6245
+Average SSIM: 0.5546
+Average MSSSIM: 0.9605
+
+===> Epoch 2 starts:
+[  10/  50]    Average Loss: 0.6198    overall time: 17.1958 + 0.2562
+[  20/  50]    Average Loss: 0.5884    overall time: 18.5662 + 0.2686
+[  30/  50]    Average Loss: 0.5789    overall time: 14.3164 + 0.2528
+[  40/  50]    Average Loss: 0.5674    overall time: 13.8727 + 0.2516
+[  50/  50]    Average Loss: 0.5640    overall time: 13.5865 + 0.2517
+[  50/  50]    Average Loss: 0.5640    overall time: 0.0000 + 0.0000
+Average PSNR: 29.5051
+Average SSIM: 0.6102
+Average MSSSIM: 0.9701
+
+===> Epoch 3 starts:
+[  10/  50]    Average Loss: 0.5060    overall time: 14.0832 + 0.2429
+[  20/  50]    Average Loss: 0.5307    overall time: 14.4415 + 0.2370
+[  30/  50]    Average Loss: 0.5266    overall time: 17.6248 + 0.2509
+[  40/  50]    Average Loss: 0.5393    overall time: 13.5003 + 0.2465
+[  50/  50]    Average Loss: 0.5385    overall time: 14.0891 + 0.2385
+[  50/  50]    Average Loss: 0.5385    overall time: 0.0000 + 0.0000
+Average PSNR: 29.7730
+Average SSIM: 0.6339
+Average MSSSIM: 0.9749
+
+===> Epoch 4 starts:
+[  10/  50]    Average Loss: 0.5570    overall time: 14.0378 + 0.2353
+[  20/  50]    Average Loss: 0.5475    overall time: 13.9914 + 0.2303
+[  30/  50]    Average Loss: 0.5239    overall time: 14.0263 + 0.2379
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  10/  50]    Average Loss: 2.2500    overall time: 0.4765 + 0.4411
+[  20/  50]    Average Loss: 1.6829    overall time: 0.4868 + 0.2555
+[  30/  50]    Average Loss: 1.4364    overall time: 0.4783 + 0.2573
+[  40/  50]    Average Loss: 1.2654    overall time: 0.4761 + 0.2550
+[  50/  50]    Average Loss: 1.1478    overall time: 0.4336 + 0.2275
+[  50/  50]    Average Loss: 1.1478    overall time: 0.0000 + 0.0000
+Average PSNR: 26.8169
+Average SSIM: 0.4435
+Average MSSSIM: 0.9400
+
+===> Epoch 1 starts:
+[  10/  50]    Average Loss: 0.6723    overall time: 0.4508 + 0.2410
+[  20/  50]    Average Loss: 0.6473    overall time: 0.4406 + 0.2308
+[  30/  50]    Average Loss: 0.6443    overall time: 0.4090 + 0.2161
+[  40/  50]    Average Loss: 0.6464    overall time: 0.4073 + 0.2179
+[  50/  50]    Average Loss: 0.6358    overall time: 0.4262 + 0.2203
+[  50/  50]    Average Loss: 0.6358    overall time: 0.0000 + 0.0000

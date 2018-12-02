@@ -20,6 +20,9 @@ import torch
 from skimage import color
 from data2 import common
 from torch.utils import data
+import os
+import pickle
+from tqdm import tqdm
 
 def is_img_file(filename):
     return any(filename.endswith(extension) for extension in [".hdr"])
@@ -27,7 +30,6 @@ def is_img_file(filename):
 def load_img(filepath):
     img = Image.open(filepath)
     #img = cv2.imread(filepath, cv2.IMREAD_UNCHANGED)
-
     return img
 
 
@@ -37,17 +39,26 @@ class DatasetFromFolder(data.Dataset):
         self.args = args
         self.train = train
         self.LR_filenames, self.HR_filenames = self._get_filenames(name)
-        
+        self.bin = self.args.ext.find('sep') >=0 or self.args.ext.find('bin') >=0
+        if self.bin:
+            self.LR_filenames, self.HR_filenames = self._get_bin(name)
         self.patch_size = args.patch_size
         
         
     def __getitem__(self, index):
-        HR = load_img(self.HR_filenames[index])
-        
+        LR_filename, HR_filename = self.LR_filenames[index], self.HR_filenames[index]
+        if self.bin:
+            with open(HR_filename, 'rb') as _f: HR = pickle.load(_f)
+        else:
+            HR = load_img(HR_filename)
+            HR = np.asarray(HR)
         #print(self.HR_filenames[index], self.classes[index])
-        if self.LR_filenames:
-            LR = load_img(self.LR_filenames[index])
-            LR, HR = np.asarray(LR), np.asarray(HR)
+        if LR_filename:
+            if self.bin:
+                with open(LR_filename, 'rb') as _f: LR = pickle.load(_f)
+            else:
+                LR = load_img(LR_filename)
+                LR = np.asarray(LR)
         else:
             HR = np.asarray(HR)
             h, w, c = np.shape(HR)
@@ -57,14 +68,13 @@ class DatasetFromFolder(data.Dataset):
 
         if self.train:
             LR, HR = random_crop(LR, HR, patch_size = self.args.patch_size)
-            #LR, HR = self.get_patch(LR, HR)
             LR, HR = augment(LR, HR)
 
         LR = torch.from_numpy((LR.transpose([2, 0, 1])).copy())
         HR = torch.from_numpy((HR.transpose([2, 0, 1])).copy())
         LR = LR.type(torch.FloatTensor)
         HR = HR.type(torch.FloatTensor)
-        filename = self.HR_filenames[index]
+        filename = HR_filename
 
         return LR, HR, filename
 
@@ -108,6 +118,20 @@ class DatasetFromFolder(data.Dataset):
             LR_names = LR_names[int(data_range[0])-1:int(data_range[1])]
             LR_filenames = [join(LR_dir, x) for x in LR_names]
             HR_filenames = [join(HR_dir, x) for x in HR_names]
+        elif name == 'cityscapes/leftImg8bit' or name == 'cityscapes/gtFine':
+            if self.train:
+                LR_dir = join(root_dir, 'train_LR_bicubic')
+                HR_dir = join(root_dir, 'train_HR')
+            else:
+                LR_dir = join(root_dir, 'val_LR_bicubic')
+                HR_dir = join(root_dir, 'val_HR')
+            LR_dir = join(LR_dir, 'X'+ str(self.args.scale[0]))
+
+            HR_names = sorted(listdir(HR_dir))
+            LR_names = sorted(listdir(LR_dir))
+
+            LR_filenames = [join(LR_dir, x) for x in LR_names]
+            HR_filenames = [join(HR_dir, x) for x in HR_names]
         elif name == 'CUB200':
             image_dir = join(root_dir, 'images', 'images')
             mid_dir = [join(image_dir, x) for x in listdir(image_dir)]
@@ -130,7 +154,48 @@ class DatasetFromFolder(data.Dataset):
 
         return LR_filenames, HR_filenames
 
+    def _get_bin(self, name):
+        if name.find('cityscapes/leftImg8bit') >= 0:
+            image_path = 'leftImg8bit/'
+            bin_path = 'leftImg8bit/bin/'
+        elif name.find('cityscapes/gtFine') >=0:
+            image_path = 'gtFine/'
+            bin_path = 'gtFine/bin/'
+        elif name.find('DIV2K') >=0:
+            image_path = 'DIV2K/'
+            bin_path = 'DIV2K/bin/'
+
+            
+        bin_hr = [x.replace(image_path, bin_path) for x in self.HR_filenames]
+        bin_hr = [x.replace('png', 'pt') for x in bin_hr]
+
+        bin_lr = [x.replace(image_path, bin_path) for x in self.LR_filenames]
+        bin_lr = [x.replace('png', 'pt') for x in bin_lr]
+
+        if self.args.ext.find('sep') >= 0:  
+            for idx, (img_path, bin_path) in enumerate(tqdm(zip(self.HR_filenames, bin_hr), ncols=80)):
+                dir_path, basename = os.path.split(bin_path)
+                os.makedirs(dir_path, exist_ok=True)
+                self._load_and_make(img_path, bin_path)
+                #print('Making binary files ' + bin_path)
+
+
+            for idx, (img_path, bin_path) in enumerate(tqdm(zip(self.LR_filenames, bin_lr), ncols=80)):
+                dir_path, basename = os.path.split(bin_path)
+                os.makedirs(dir_path, exist_ok=True)
+                self._load_and_make(img_path, bin_path)
+                #print('Making binary files ' + bin_path)
+
+
+        return bin_lr, bin_hr
+
+    def _load_and_make(self, img_path, bin_path):
+        image = load_img(img_path)
+        bin = np.asarray(image)
+        with open(bin_path, 'wb') as _f: pickle.dump(bin, _f)
+
 def get_train_loader(args):
+    train_set = DatasetFromFolder(args, 'cityscapes/gtFine', train=True)
     train_set = DatasetFromFolder(args, args.data_train[0], train=True)
     train_loader = data.DataLoader(dataset=train_set,
                               batch_size=args.batch_size,
@@ -138,8 +203,8 @@ def get_train_loader(args):
 
     return train_loader
 def get_val_loader(args):
+    val_set = DatasetFromFolder(args, 'cityscapes/gtFine', train=False)
     val_set = DatasetFromFolder(args, args.data_test[0], train=False)
-    
     val_loader = data.DataLoader(dataset=val_set,
                               batch_size=1,
                               shuffle=False)
