@@ -1,0 +1,158 @@
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.5791    overall time: 196.5640 + 3.3312
+Average PSNR: 31.3805
+Average SSIM: 0.8806
+Average MSSSIM: 0.9597
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.6037    overall time: 200.7565 + 3.2187
+Average PSNR: 31.1579
+Average SSIM: 0.8772
+Average MSSSIM: 0.9580
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.5908    overall time: 204.9802 + 3.2480
+Average PSNR: 31.0903
+Average SSIM: 0.8776
+Average MSSSIM: 0.9577
+
+===> Epoch 1 starts:
+
+[ 186/ 186]    Average Loss: 0.3492    overall time: 206.2933 + 3.2363
+
+===> Epoch 2 starts:
+
+[ 186/ 186]    Average Loss: 0.3299    overall time: 201.3480 + 3.0905
+
+===> Epoch 3 starts:
+
+[ 186/ 186]    Average Loss: 0.3120    overall time: 203.3708 + 2.9425
+
+===> Epoch 4 starts:
+
+[ 186/ 186]    Average Loss: 0.2987    overall time: 207.1897 + 3.2586
+
+===> Epoch 5 starts:
+
+[ 186/ 186]    Average Loss: 0.3059    overall time: 208.3269 + 3.2697
+Average PSNR: 32.4728
+Average SSIM: 0.9050
+Average MSSSIM: 0.9679
+
+===> Epoch 6 starts:
+
+[ 186/ 186]    Average Loss: 0.3049    overall time: 207.7807 + 2.9745
+
+===> Epoch 7 starts:
+
+[ 186/ 186]    Average Loss: 0.3086    overall time: 205.3296 + 2.9411
+
+===> Epoch 8 starts:
+
+[ 186/ 186]    Average Loss: 0.3044    overall time: 203.4529 + 3.0535
+
+===> Epoch 9 starts:
+
+[ 186/ 186]    Average Loss: 0.3025    overall time: 201.0768 + 2.9386
+
+===> Epoch 10 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.6001    overall time: 200.1252 + 3.1238
+Average PSNR: 30.9469
+Average SSIM: 0.8749
+Average MSSSIM: 0.9574
+
+===> Epoch 1 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.6225    overall time: 239.7187 + 4.0787
+Average PSNR: 30.9972
+Average SSIM: 0.8794
+Average MSSSIM: 0.9593
+
+===> Epoch 1 starts:
+
+[ 186/ 186]    Average Loss: 0.3414    overall time: 5.0501 + 2.6440
+
+===> Epoch 2 starts:
+
+[ 186/ 186]    Average Loss: 0.3223    overall time: 4.9002 + 2.6631
+
+===> Epoch 3 starts:
+
+[ 186/ 186]    Average Loss: 0.3144    overall time: 4.8583 + 4.1517
+
+===> Epoch 4 starts:
+
+[ 186/ 186]    Average Loss: 0.3102    overall time: 4.8944 + 2.6640
+
+===> Epoch 5 starts:
+
+[ 186/ 186]    Average Loss: 0.3038    overall time: 4.8965 + 2.6600
+Average PSNR: 32.6727
+Average SSIM: 0.9075
+Average MSSSIM: 0.9703
+
+===> Epoch 6 starts:
+
+[ 186/ 186]    Average Loss: 0.3028    overall time: 4.8997 + 2.6978
+
+===> Epoch 7 starts:
+
+[ 186/ 186]    Average Loss: 0.2928    overall time: 5.0136 + 2.6838
+
+===> Epoch 8 starts:
+
+[ 186/ 186]    Average Loss: 0.3040    overall time: 5.1492 + 2.6527
+
+===> Epoch 9 starts:
+
+[ 186/ 186]    Average Loss: 0.2951    overall time: 4.8995 + 4.1630
+
+===> Epoch 10 starts:
+
+[ 186/ 186]    Average Loss: 0.2953    overall time: 4.8407 + 2.6662
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.5908    overall time: 5.0283 + 3.0780
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.5692    overall time: 6.3641 + 3.2230
+Average PSNR: 30.8886
+Average SSIM: 0.8770
+Average MSSSIM: 0.9573
+
+===> Epoch 1 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.5892    overall time: 784.7433 + 3.6521

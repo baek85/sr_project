@@ -1,2 +1,7 @@
 *.png
 *.jpg
+*.pth
+edsr_4D_x4/
+edsr_baseline_x4/
+Result/
+EDSR-PyTorch/

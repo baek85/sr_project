@@ -13,12 +13,8 @@ from preprocess import make_train_set, make_val_set
 from trainer import Trainer
 
 
-if not os.path.exists(args.image_path):
-    os.makedirs(args.image_path)
-    
 #valset = make_val_set(args)
 #trainset = make_train_set(args)
-
 #print('Make Dataset format same with DIV2K')
 
 print('Make DataLoader ')

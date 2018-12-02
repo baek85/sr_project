@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Sep 19 16:28:42 2018
-
 @author: Baek
 """
 
@@ -171,7 +170,7 @@ class DatasetFromFolder(data.Dataset):
 
         return LR_filenames, HR_filenames
 
-    def _get_bin(self, name, HR_filenames, LR_filenames):
+    def _get_bin(self, name, LR_filenames , HR_filenames):
         if name.find('cityscapes/leftImg8bit') >= 0:
             image_path = 'leftImg8bit/'
             bin_path = 'leftImg8bit/bin/'
@@ -215,6 +214,7 @@ def get_train_loader(args):
     train_set = DatasetFromFolder(args, args.data_train[0], train=True)
     train_loader = data.DataLoader(dataset=train_set,
                               batch_size=args.batch_size,
+                              num_workers=0,
                               shuffle=True)
 
     return train_loader
@@ -223,6 +223,7 @@ def get_val_loader(args):
     val_set = DatasetFromFolder(args, args.data_test[0], train=False)
     val_loader = data.DataLoader(dataset=val_set,
                               batch_size=1,
+                              num_workers=0,
                               shuffle=False)
     return val_loader
 

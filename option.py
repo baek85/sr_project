@@ -13,7 +13,7 @@ parser.add_argument('--n_threads', type=int, default=0,
 # Data
 parser.add_argument('--ext', type=str, default='sep',
                     help='dataset file extension')
-parser.add_argument('--dir_data', type=str, default='../../../../dataset',
+parser.add_argument('--dir_data', type=str, default='../../../dataset',
                     help='dataset directory')
 parser.add_argument('--data_train', type=str, default='DIV2K',
                     help='train dataset name')
@@ -49,7 +49,7 @@ parser.add_argument('--dilation', action='store_true',
                     help='use dilated convolution')
 
 # Training
-parser.add_argument('--test_every', type=int, default=1000, 
+parser.add_argument('--test_every', type=int, default=5, 
                     help='test images every n iters')
 parser.add_argument('--epochs', type=int, default=300,
                     help='number of epochs to train')

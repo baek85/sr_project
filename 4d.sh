@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python3 main.py --data_train cityscapes/leftImg8bit --data_test cityscapes/leftImg8bit --model EDSR --scale 4 --patch_size 96 --model_path edsr_4D_x4 --ext bin --epochs 1000 --n_colors 4

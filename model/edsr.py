@@ -50,7 +50,7 @@ class EDSR(nn.Module):
         self.tail = nn.Sequential(*m_tail)
 
     def forward(self, x):
-        if self.n_colors:
+        if self.n_colors == 4:
             img, label = x[:,0:3,:,:], x[:,3,:,:]
             x = self.sub_mean(img)
             x = torch.cat((x, label.unsqueeze(dim=1)), 1)

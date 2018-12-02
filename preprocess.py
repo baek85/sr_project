@@ -18,6 +18,7 @@ class MakeDataset():
         self.train = train
         self.scale = args.scale[0]
         self.LR_filenames, self.HR_filenames = self._get_filenames(name)
+        self.LR_labelnames, self.HR_labelnames = self._get_filenames('cityscapes/gtFine')
 
         self.basenames = [os.path.basename(x) for x in self.HR_filenames]
         root_dir = os.path.join(args.dir_data, name) 
@@ -27,31 +28,50 @@ class MakeDataset():
         else:
             self.HR2 = [os.path.join(root_dir,'val_HR/' + x) for x in self.basenames]
             self.LR_filenames = [os.path.join(root_dir,'val_LR_bicubic/X'+str(self.scale) +'/' + x) for x in self.basenames]
+        self.LR_filenames = [x.replace('leftImg8bit/', '4Dbin/') for x in  self.LR_filenames]
+        self.HR2 = [x.replace('leftImg8bit/', '4Dbin/') for x in  self.HR2]
+
         self.LR_dir = os.path.dirname(self.LR_filenames[0])
         if not os.path.exists(self.LR_dir):
             os.makedirs(self.LR_dir)
         self.HR_dir = os.path.dirname(self.HR2[0])
         if not os.path.exists(self.HR_dir):
             os.makedirs(self.HR_dir)
+
         self._make_LR(name)
 
     def _make_LR(self, name):
-        for index, HR_filename in enumerate(tqdm(self.HR_filenames, ncols=80)):
-            HR = load_img(HR_filename)
-            HR.save(self.HR2[index])
-            HR = np.asarray(HR)
-            size = np.shape(HR)
-            h, w = size[0], size[1]
-            h2, w2 = (h//self.scale)*self.scale, (w//self.scale)*self.scale
-            if len(size) == 3:
-                HR = HR[0:h2, 0:w2, :]
-            else:
-                HR = HR[0:h2, 0:w2]
-            LR = cv2.resize(HR, None, fx = 1 / self.scale, fy = 1 / self.scale,interpolation = cv2.INTER_CUBIC)
-            im = Image.fromarray(LR)     
-            im.save(self.LR_filenames[index])
-            #print('Save LR image X' + str(self.scale), 'to', self.LR_filenames[index])
+        for index, (HR_filename, HR_labelname) in enumerate(tqdm(zip(self.HR_filenames, self.HR_labelnames), ncols=80)):
+            HR, HRlabel = load_img(HR_filename), load_img(HR_labelname)
+            #print(HR_filename)
+            HR, HRlabel = np.asarray(HR), np.asarray(HRlabel)
+            #print(HR.shape, HRlabel.shape)
+            LR, LRlabel = self._make_lr(HR), self._make_lr(HRlabel)
 
+            LRlabel, HRlabel = LRlabel * 255 / 33, HRlabel *255 / 33
+            LR, HR = LR, HR
+            LRlabel, HRlabel = np.expand_dims(LRlabel, axis=2), np.expand_dims(HRlabel, axis=2)
+            #print(LR.shape, LRlabel.shape), print(HR.shape,HRlabel.shape)
+            LR, HR = np.concatenate((LR, LRlabel), axis = 2), np.concatenate((HR, HRlabel), axis = 2)
+            self._make_bin(HR, self.HR2[index])
+            self._make_bin(LR, self.LR_filenames[index])
+
+            #print('Save LR image X' + str(self.scale), 'to', self.LR_filenames[index])
+    def _make_bin(self, data, filepath):
+        bin_path = filepath.replace('png', 'pt')
+        with open(bin_path, 'wb') as _f: pickle.dump(data, _f)
+
+    def _make_lr(self, HR):
+        size = np.shape(HR)
+
+        h, w = size[0], size[1]
+        h2, w2 = (h//self.scale)*self.scale, (w//self.scale)*self.scale
+        if len(size) == 3:
+            HR = HR[0:h2, 0:w2, :]
+        else:
+            HR = HR[0:h2, 0:w2]
+        LR = cv2.resize(HR, None, fx = 1/self.scale, fy = 1/self.scale,interpolation = cv2.INTER_CUBIC)
+        return LR
     def _get_filenames(self, name):
         
         if name == 'DIV2K':
@@ -127,12 +147,10 @@ class MakeDataset():
         return LR_filenames, HR_filenames
 
 def make_train_set(args):
-    train_set = MakeDataset(args, 'cityscapes/gtFine', train=True)
-    train_set = MakeDataset(args, args.data_train[0], train=True)
+    train_set = MakeDataset(args, 'cityscapes/leftImg8bit', train=True)
     return train_set
 
 def make_val_set(args):
     
-    val_set = MakeDataset(args, 'cityscapes/gtFine', train=False)
-    val_set = MakeDataset(args, args.data_test[0], train=False)
+    val_set = MakeDataset(args, 'cityscapes/leftImg8bit', train=False)
     return val_set

@@ -40,6 +40,7 @@ class Trainer(object):
         self.GPU_IN_USE = torch.cuda.is_available()
         self.device = torch.device('cuda' if self.GPU_IN_USE else 'cpu')
         self.scale = args.scale
+        self.batch_size = args.batch_size
         self.model = None
         self.down = None
         self.lr = args.lr
@@ -53,12 +54,17 @@ class Trainer(object):
         self.test_timer = None
         self.training_loader = training_loader
         self.testing_loader = testing_loader
-        self.model_out_path = args.model_path
-        self.image_path = args.image_path
+        self.model_path = args.model_path
+        self.image_path = os.path.join(args.model_path, 'image')
         self.loss_type = args.loss_type
-        self.text_path = "./text/lr_{}_bat_{}.txt".format(self.lr, (self.loss_type == 'direct'))
-        if not os.path.exists('./text'):
-             os.makedirs('./text')
+        self.text_path = os.path.join(args.model_path,"log/lr_{}_bat_{}.txt".format(self.lr, self.batch_size))
+        if not os.path.exists(self.model_path):
+             os.makedirs(self.model_path)
+        if not os.path.exists(self.image_path):
+             os.makedirs(self.image_path)
+        if not os.path.exists(os.path.dirname(self.text_path)):
+             os.makedirs(os.path.dirname(self.text_path))
+                 
     def build_model(self):
         if self.args.pretrain:
             print('Loading  ', self.args.pretrain)
@@ -100,7 +106,8 @@ class Trainer(object):
         
             batch_size = LR.size(0)
             LR, HR = LR.to(self.device), HR.to(self.device)
-            HR, HRlabel = HR[:,0:3, :,:], HR[:,3,:,:]
+            if self.args.n_colors == 4:
+                HR, HRlabel = HR[:,0:3, :,:], HR[:,3,:,:]
             self.data_timer.stop()
             if batch_num == 0:
                 self.train_timer.start()
@@ -143,31 +150,34 @@ class Trainer(object):
                 self.data_timer.overall, self.train_timer.overall), self.text_path)
 
     def test(self):
-        self.model.eval()
         val_length = 0
         avg_psnr = 0
         avg_ssim = 0
         avg_msssim = 0
+        self.model.eval()
         with torch.no_grad():
             for batch_num, (LR, HR, filename) in enumerate(tqdm(self.testing_loader, ncols=80)):
                 batch_size = LR.size(0)
                 LR, HR = LR.to(self.device), HR.to(self.device)
-                HR, HRlabel = HR[:,0:3, :,:], HR[:,3,:,:]
-                SR = self.model(LR)
-                for idx in range(batch_size):
-                    res = SR[idx,:,:,:].unsqueeze(dim=0)
-                    ret = HR[idx,:,:,:].unsqueeze(dim=0)
-                    val_length +=1
-                    mse = self.L2(res/self.args.rgb_range,ret/self.args.rgb_range)
-                    psnr = -10 * math.log10( mse)
-                    psnr = calc_psnr(res, ret, int(self.args.scale[0]), self.args.rgb_range)
-                    ssim = self.ssim_loss(res/self.args.rgb_range, ret/self.args.rgb_range)
-                    msssim = self.msssim_loss(res/self.args.rgb_range, ret/self.args.rgb_range)
-                    avg_psnr += psnr
-                    avg_ssim += ssim
-                    avg_msssim += msssim
 
-                HR_name = os.path.join(self.image_path, filename[0])
+
+                if self.args.n_colors == 4:
+                    HR, HRlabel = HR[:,0:3, :,:], HR[:,3,:,:]
+
+                SR = self.model(LR)
+                
+                val_length +=1
+                mse = self.L2(SR/self.args.rgb_range,HR/self.args.rgb_range)
+                psnr = -10 * math.log10( mse)
+                psnr = calc_psnr(SR, HR, int(self.args.scale[0]), self.args.rgb_range)
+                ssim = self.ssim_loss(SR/self.args.rgb_range, HR/self.args.rgb_range)
+                msssim = self.msssim_loss(SR/self.args.rgb_range, HR/self.args.rgb_range)
+                avg_psnr += psnr
+                avg_ssim += ssim
+                avg_msssim += msssim
+
+                basename = os.path.basename(filename[0])
+                HR_name = os.path.join(self.image_path, 'HR_'+basename.replace('pt', 'png'))
                 LR_name = HR_name.replace("HR", "LR")
                 res_name = HR_name.replace("HR", "SR")
                 
@@ -194,29 +204,22 @@ class Trainer(object):
 
     def save(self):
         #model_out_path = str(self.epoch) + self.model_out_path
-        model_out_path = self.model_out_path
+        model_out_path = os.path.join(self.model_path, 'model.pth') 
         torch.save(self.model, model_out_path)
-        print("Checkpoint saved to {}".format(self.model_out_path))
+        print("Checkpoint saved to {}".format(model_out_path))
 
     def plot(self, epoch):
-        X = np.linspace(0, epoch, epoch)
-        Y = np.linspace(0, epoch, self.args.test_iters)
+        Y = np.linspace(0, epoch, epoch/self.args.test_every + 1)
         fig = plt.figure()
-        ax1 = fig.add_subplot(3, 1, 1)
-        plt.xlabel('Epoch')
-        plt.ylabel('Training Loss')
-        ax2 = fig.add_subplot(3, 1, 2)
+        ax1 = fig.add_subplot(2, 1, 1)
         plt.xlabel('Epoch')
         plt.ylabel('PSNR(dB)')
-        ax3 = fig.add_subplot(3,1,3)
+        ax2 = fig.add_subplot(2,1,2)
         plt.xlabel('Epoch')
-        print(self.loss)
-        print(self.psnr)
-        if(len(X) == len(self.loss) and len(X) == len(self.psnr)):
-            ax1.plot(X, self.loss)
-            ax2.plot(Y, self.psnr)
-            ax3.plot(Y, self.ssim)
-            plt.savefig(os.path.join(self.image_path,'loss_psnr_ssim.png'))
+        plt.ylabel('SSIM')
+        ax1.plot(Y, self.psnr)
+        ax2.plot(Y, self.ssim)
+        plt.savefig(os.path.join(self.image_path,'loss_psnr_ssim.png'))
 
     def run(self):
         self.build_model()
@@ -236,7 +239,9 @@ class Trainer(object):
             if not self.args.test_only:
                 self.train()
                 self.scheduler.step(epoch)
-                self.test()
+                if (epoch) % self.args.test_every == 0:
+                    self.test()
+                    self.plot(epoch)
                 self.save() 
                 
             if self.args.test_only:
