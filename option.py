@@ -13,7 +13,7 @@ parser.add_argument('--n_threads', type=int, default=0,
 # Data
 parser.add_argument('--ext', type=str, default='sep',
                     help='dataset file extension')
-parser.add_argument('--dir_data', type=str, default='../../../dataset',
+parser.add_argument('--dir_data', type=str, default='../../../../dataset',
                     help='dataset directory')
 parser.add_argument('--data_train', type=str, default='DIV2K',
                     help='train dataset name')
@@ -74,7 +74,7 @@ parser.add_argument('--loss_type', type=str, default='L1', help='loss type   L1 
 # Log
 parser.add_argument('--model_path', type=str, default="model/EDSRx2.pth", help='model output path')
 parser.add_argument('--image_path', type=str, default='Result', help='output path')
-parser.add_argument('--print_every', type=int, default=10,
+parser.add_argument('--print_every', type=int, default=10000,
                     help='how many batches to wait before logging training status')
 
 

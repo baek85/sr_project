@@ -19,7 +19,7 @@ if not os.path.exists(args.image_path):
 #valset = make_val_set(args)
 #trainset = make_train_set(args)
 
-print('Make Dataset format same with DIV2K')
+#print('Make Dataset format same with DIV2K')
 
 print('Make DataLoader ')
 #loader = data.Data(args)

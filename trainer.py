@@ -96,7 +96,7 @@ class Trainer(object):
         train_loss = 0
         train_length = 0
         self.data_timer.start()
-        for batch_num, (LR, HR, filename) in enumerate(self.training_loader):
+        for batch_num, (LR, HR, filename) in enumerate(tqdm(self.training_loader, ncols=80)):
         
             batch_size = LR.size(0)
             LR, HR = LR.to(self.device), HR.to(self.device)
@@ -128,7 +128,7 @@ class Trainer(object):
             
             train_length += batch_size
             if(batch_num+1) % self.args.print_every == 0:
-                print_save("[{:4d}/{:4d}]    Average Loss: {:.4f}    overall time: {:.4f} + {:.4f}"
+                print_save("\n[{:4d}/{:4d}]    Average Loss: {:.4f}    overall time: {:.4f} + {:.4f}"
                 .format(batch_num+1, len(self.training_loader),(train_loss / train_length), 
                 self.data_timer.overall, self.train_timer.overall), self.text_path)
                 self.data_timer.start()
@@ -137,7 +137,7 @@ class Trainer(object):
                 self.data_timer.go()
 
         self.loss.append(train_loss / train_length)
-        print_save("[{:4d}/{:4d}]    Average Loss: {:.4f}    overall time: {:.4f} + {:.4f}"
+        print_save("\n[{:4d}/{:4d}]    Average Loss: {:.4f}    overall time: {:.4f} + {:.4f}"
                 .format(batch_num+1, len(self.training_loader),(train_loss / train_length), 
                 self.data_timer.overall, self.train_timer.overall), self.text_path)
 
@@ -148,13 +148,11 @@ class Trainer(object):
         avg_ssim = 0
         avg_msssim = 0
         with torch.no_grad():
-            for batch_num, (LR, HR, filename) in enumerate(self.testing_loader):
-
+            for batch_num, (LR, HR, filename) in enumerate(tqdm(self.testing_loader, ncols=80)):
                 batch_size = LR.size(0)
                 LR, HR = LR.to(self.device), HR.to(self.device)
 
                 SR = self.model(LR)
-
                 for idx in range(batch_size):
                     res = SR[idx,:,:,:].unsqueeze(dim=0)
                     ret = HR[idx,:,:,:].unsqueeze(dim=0)
@@ -162,8 +160,8 @@ class Trainer(object):
                     mse = self.L2(res/self.args.rgb_range,ret/self.args.rgb_range)
                     psnr = -10 * math.log10( mse)
                     psnr = calc_psnr(res, ret, int(self.args.scale[0]), self.args.rgb_range)
-                    ssim = self.ssim_loss(res, ret)
-                    msssim = self.msssim_loss(res, ret)
+                    ssim = self.ssim_loss(res/self.args.rgb_range, ret/self.args.rgb_range)
+                    msssim = self.msssim_loss(res/self.args.rgb_range, ret/self.args.rgb_range)
                     avg_psnr += psnr
                     avg_ssim += ssim
                     avg_msssim += msssim

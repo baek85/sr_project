@@ -4394,3 +4394,247 @@ Average MSSSIM: 0.9400
 [  40/  50]    Average Loss: 0.6464    overall time: 0.4073 + 0.2179
 [  50/  50]    Average Loss: 0.6358    overall time: 0.4262 + 0.2203
 [  50/  50]    Average Loss: 0.6358    overall time: 0.0000 + 0.0000
+lr : 0.0001
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  10/ 186]    Average Loss: 1.1736    overall time: 10.0700 + 0.8090
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  20/ 186]    Average Loss: 0.9024    overall time: 9.8328 + 0.3333
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  30/ 186]    Average Loss: 0.7509    overall time: 17.9880 + 0.3724
+[  40/ 186]    Average Loss: 0.6584    overall time: 9.9158 + 0.3319
+[  50/ 186]    Average Loss: 0.5994    overall time: 9.4585 + 0.3306
+[  60/ 186]    Average Loss: 0.5516    overall time: 9.7118 + 0.3316
+[  70/ 186]    Average Loss: 0.5155    overall time: 9.7013 + 0.3306
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  10/ 186]    Average Loss: 1.8912    overall time: 8.7753 + 0.5806
+[  80/ 186]    Average Loss: 0.4881    overall time: 20.7564 + 0.3630
+[  20/ 186]    Average Loss: 1.3921    overall time: 10.0544 + 0.1818
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  10/ 186]    Average Loss: 1.7948    overall time: 0.5320 + 0.8107
+[  20/ 186]    Average Loss: 1.2775    overall time: 0.6427 + 0.4032
+[  30/ 186]    Average Loss: 1.0399    overall time: 0.5774 + 0.3314
+[  40/ 186]    Average Loss: 0.9007    overall time: 0.5766 + 0.3654
+[  50/ 186]    Average Loss: 0.8017    overall time: 0.5896 + 0.3535
+[  30/ 186]    Average Loss: 1.1541    overall time: 9.8773 + 0.4041
+[  60/ 186]    Average Loss: 0.7304    overall time: 0.6467 + 0.4359
+[  70/ 186]    Average Loss: 0.6726    overall time: 0.6523 + 0.4245
+[  40/ 186]    Average Loss: 1.0199    overall time: 2.1187 + 0.4899
+[  80/ 186]    Average Loss: 0.6275    overall time: 0.6431 + 0.4321
+[  50/ 186]    Average Loss: 0.9288    overall time: 7.2684 + 0.3319
+[  60/ 186]    Average Loss: 0.8679    overall time: 11.1560 + 0.1817
+lr : 0.0001
+
+===> Epoch 0 starts:
+[  70/ 186]    Average Loss: 0.8180    overall time: 9.4155 + 0.2353
+[  90/ 186]    Average Loss: 0.5894    overall time: 32.9013 + 0.4483
+[  10/ 186]    Average Loss: 1.6140    overall time: 10.1702 + 0.9054
+[  80/ 186]    Average Loss: 0.7742    overall time: 9.4617 + 0.2166
+[  20/ 186]    Average Loss: 1.1362    overall time: 11.0957 + 0.2268
+[  90/ 186]    Average Loss: 0.7397    overall time: 9.3176 + 0.1977
+[  30/ 186]    Average Loss: 0.9493    overall time: 10.6703 + 0.2060
+[  40/ 186]    Average Loss: 0.8441    overall time: 11.9865 + 0.2726
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[  10/ 186]    Average Loss: 1.6522    overall time: 0.3011 + 0.6896
+
+[  20/ 186]    Average Loss: 1.1836    overall time: 0.3334 + 0.2314
+
+[  30/ 186]    Average Loss: 0.9859    overall time: 0.3084 + 0.2122
+[ 100/ 186]    Average Loss: 0.7093    overall time: 33.0092 + 0.3766
+
+[  40/ 186]    Average Loss: 0.8650    overall time: 0.3587 + 0.2664
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[  50/ 186]    Average Loss: 0.7848    overall time: 1.3634 + 0.2406
+
+[  10/ 186]    Average Loss: 1.4299    overall time: 0.5978 + 0.8891
+
+[  20/ 186]    Average Loss: 1.0650    overall time: 0.7171 + 0.5366
+
+[  60/ 186]    Average Loss: 0.7211    overall time: 2.6125 + 0.6506
+
+[  30/ 186]    Average Loss: 0.8848    overall time: 0.7081 + 0.5111
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[  40/ 186]    Average Loss: 0.7711    overall time: 0.8377 + 0.6080
+
+[  70/ 186]    Average Loss: 0.6756    overall time: 2.5518 + 0.7788
+
+[  10/ 186]    Average Loss: 1.9031    overall time: 0.5920 + 1.2439
+
+[  50/ 186]    Average Loss: 0.6993    overall time: 0.9633 + 0.8440
+
+[  20/ 186]    Average Loss: 1.4151    overall time: 0.5009 + 0.7034
+
+[  60/ 186]    Average Loss: 0.6478    overall time: 0.9710 + 0.8549
+
+[  30/ 186]    Average Loss: 1.1778    overall time: 0.5066 + 0.6965
+
+[  80/ 186]    Average Loss: 0.6350    overall time: 2.4713 + 1.0246
+
+[  40/ 186]    Average Loss: 1.0616    overall time: 0.5244 + 0.7027
+
+[  70/ 186]    Average Loss: 0.6038    overall time: 1.0351 + 0.8747
+
+[  50/ 186]    Average Loss: 0.9704    overall time: 0.5052 + 0.6902
+
+[  60/ 186]    Average Loss: 0.8999    overall time: 0.5414 + 0.6994
+
+[  80/ 186]    Average Loss: 0.5656    overall time: 0.9995 + 0.8593
+
+[  90/ 186]    Average Loss: 0.6046    overall time: 2.5548 + 1.0151
+
+[  70/ 186]    Average Loss: 0.8466    overall time: 0.5565 + 0.6409
+
+[  90/ 186]    Average Loss: 0.5355    overall time: 0.9710 + 0.8655
+
+[  80/ 186]    Average Loss: 0.8051    overall time: 0.5233 + 0.7300
+
+[  90/ 186]    Average Loss: 0.7752    overall time: 0.4374 + 0.5493
+
+[ 100/ 186]    Average Loss: 0.7476    overall time: 0.3177 + 0.2955
+
+[ 100/ 186]    Average Loss: 0.5109    overall time: 4.4127 + 0.7442
+
+[ 100/ 186]    Average Loss: 0.5789    overall time: 6.8878 + 0.7544
+
+[ 110/ 186]    Average Loss: 0.4875    overall time: 26.9159 + 0.7128
+
+[ 110/ 186]    Average Loss: 0.5587    overall time: 25.6036 + 0.5784
+
+[ 110/ 186]    Average Loss: 0.7207    overall time: 30.3012 + 0.4338
+
+[ 120/ 186]    Average Loss: 0.5394    overall time: 27.2557 + 0.4732
+
+[ 120/ 186]    Average Loss: 0.7004    overall time: 27.3212 + 0.4305
+
+[ 120/ 186]    Average Loss: 0.4666    overall time: 27.2317 + 0.6748
+
+[ 130/ 186]    Average Loss: 0.4481    overall time: 27.7429 + 0.7570
+
+[ 130/ 186]    Average Loss: 0.6794    overall time: 28.1014 + 0.4684
+
+[ 130/ 186]    Average Loss: 0.5225    overall time: 28.1165 + 0.4987
+
+[ 140/ 186]    Average Loss: 0.6615    overall time: 26.7647 + 0.4522
+
+[ 140/ 186]    Average Loss: 0.5077    overall time: 26.7275 + 0.5209
+
+[ 140/ 186]    Average Loss: 0.4312    overall time: 26.5916 + 0.7271
+
+[ 150/ 186]    Average Loss: 0.6447    overall time: 28.3556 + 0.3908
+
+[ 150/ 186]    Average Loss: 0.4940    overall time: 28.2875 + 0.4120
+
+[ 150/ 186]    Average Loss: 0.4182    overall time: 28.0216 + 0.6368
+
+[ 160/ 186]    Average Loss: 0.6294    overall time: 30.1004 + 0.4524
+
+[ 160/ 186]    Average Loss: 0.4811    overall time: 30.0416 + 0.5660
+
+[ 160/ 186]    Average Loss: 0.4064    overall time: 29.9081 + 0.7323
+
+[ 170/ 186]    Average Loss: 0.3959    overall time: 27.7870 + 0.7054
+
+[ 170/ 186]    Average Loss: 0.6180    overall time: 28.1723 + 0.4998
+
+[ 170/ 186]    Average Loss: 0.4702    overall time: 28.0910 + 0.5351
+
+[ 180/ 186]    Average Loss: 0.6042    overall time: 27.5622 + 0.3192
+
+[ 180/ 186]    Average Loss: 0.4607    overall time: 27.5134 + 0.3842
+
+[ 180/ 186]    Average Loss: 0.3862    overall time: 27.3708 + 0.6893
+
+[ 186/ 186]    Average Loss: 0.5960    overall time: 16.7518 + 1.2431
+
+[ 186/ 186]    Average Loss: 0.4555    overall time: 16.7837 + 1.3152
+
+[ 186/ 186]    Average Loss: 0.3806    overall time: 16.5932 + 1.4701
+Average PSNR: 30.9844
+Average SSIM: 0.3740
+Average MSSSIM: 0.9572
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.5938    overall time: 130.3860 + 4.1456
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.5977    overall time: 4.9533 + 4.0492
+Average PSNR: 31.4013
+Average SSIM: 0.3864
+Average MSSSIM: 0.9594
+
+===> Epoch 1 starts:
+
+[ 186/ 186]    Average Loss: 0.3499    overall time: 4.9369 + 3.3505
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.5952    overall time: 4.8127 + 4.0624
+Average PSNR: 31.1579
+Average SSIM: 0.8759
+Average MSSSIM: 0.9573
+
+===> Epoch 1 starts:
+
+[ 186/ 186]    Average Loss: 0.3462    overall time: 5.0320 + 3.3001
+Average PSNR: 31.8210
+Average SSIM: 0.8909
+Average MSSSIM: 0.9648
+
+===> Epoch 2 starts:
+
+[ 186/ 186]    Average Loss: 0.3209    overall time: 4.9246 + 3.3123

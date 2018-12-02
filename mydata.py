@@ -38,6 +38,7 @@ class DatasetFromFolder(data.Dataset):
         super(DatasetFromFolder, self).__init__()
         self.args = args
         self.train = train
+        self.scale = args.scale[0]
         self.LR_filenames, self.HR_filenames = self._get_filenames(name)
         self.bin = self.args.ext.find('sep') >=0 or self.args.ext.find('bin') >=0
         if self.bin:
@@ -67,7 +68,8 @@ class DatasetFromFolder(data.Dataset):
             LR = cv2.resize(HR, None, fx = 0.5, fy = 0.5,interpolation = cv2.INTER_CUBIC)
 
         if self.train:
-            LR, HR = random_crop(LR, HR, patch_size = self.args.patch_size)
+
+            LR, HR = random_crop(LR, HR, patch_size = self.args.patch_size, scale = self.scale)
             LR, HR = augment(LR, HR)
 
         LR = torch.from_numpy((LR.transpose([2, 0, 1])).copy())
@@ -210,14 +212,15 @@ def get_val_loader(args):
                               shuffle=False)
     return val_loader
 
-def random_crop(LR, HR, patch_size = 96):
+def random_crop(LR, HR, patch_size = 96, scale = 2):
     h, w, c = np.shape(HR)
 
     crop_w = patch_size
     crop_h = patch_size
     i = random.randint(0, h- crop_h)
     j = random.randint(0, w - crop_w)
-    LR = LR[i//2:(i+crop_h)//2, j//2:(j+crop_w)//2,:]
+    #print(i//scale, (i+crop_h)//scale, j//scale, (j+crop_w)//scale)
+    LR = LR[i//scale:(i+crop_h)//scale, j//scale:(j+crop_w)//scale,:]
     HR = HR[i:i+crop_h, j:j+crop_w, :]
     
     return LR, HR
