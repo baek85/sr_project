@@ -23,7 +23,8 @@ from torch.utils import data
 import os
 import pickle
 from tqdm import tqdm
-
+import time
+import gc
 def is_img_file(filename):
     return any(filename.endswith(extension) for extension in [".hdr"])
 
@@ -94,12 +95,18 @@ class DatasetFromFolder(data.Dataset):
         return lr, hr
     def _open_file(self, LR_filename, HR_filename):
         if self.bin:
-            with open(HR_filename, 'rb') as _f: HR = pickle.load(_f)
+            with open(HR_filename, 'rb') as _f: 
+                gc.disable()
+                # enable garbage collector again
+                HR = pickle.load(_f)
+                gc.enable()
+
+                
         else:
             HR = load_img(HR_filename)
             HR = np.asarray(HR)
 
-        if LR_filename:
+        if LR_filename is not None:
             if self.bin:
                 with open(LR_filename, 'rb') as _f: LR = pickle.load(_f)
             else:
@@ -112,7 +119,8 @@ class DatasetFromFolder(data.Dataset):
             h2, w2 = (h//2)*2, (w//2)*2
             HR = HR[0:h2, 0:w2, :]
             LR = cv2.resize(HR, None, fx = 0.5, fy = 0.5,interpolation = cv2.INTER_CUBIC)
-        
+
+
         return LR, HR
     def _get_filenames(self, name):
         root_dir = join(self.args.dir_data, name)
@@ -171,7 +179,7 @@ class DatasetFromFolder(data.Dataset):
 
         return LR_filenames, HR_filenames
 
-    def _get_bin(self, name, HR_filenames, LR_filenames):
+    def _get_bin(self, name, LR_filenames, HR_filenames):
         if name.find('cityscapes/leftImg8bit') >= 0:
             image_path = 'leftImg8bit/'
             bin_path = 'leftImg8bit/bin/'

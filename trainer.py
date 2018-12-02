@@ -100,7 +100,8 @@ class Trainer(object):
         
             batch_size = LR.size(0)
             LR, HR = LR.to(self.device), HR.to(self.device)
-            HR, HRlabel = HR[:,0:3, :,:], HR[:,3,:,:]
+            if self.args.n_colors == 4:
+                HR, HRlabel = HR[:,0:3, :,:], HR[:,3,:,:]
             self.data_timer.stop()
             if batch_num == 0:
                 self.train_timer.start()
@@ -152,7 +153,8 @@ class Trainer(object):
             for batch_num, (LR, HR, filename) in enumerate(tqdm(self.testing_loader, ncols=80)):
                 batch_size = LR.size(0)
                 LR, HR = LR.to(self.device), HR.to(self.device)
-                HR, HRlabel = HR[:,0:3, :,:], HR[:,3,:,:]
+                if self.args.n_colors == 4:
+                    HR, HRlabel = HR[:,0:3, :,:], HR[:,3,:,:]
                 SR = self.model(LR)
                 for idx in range(batch_size):
                     res = SR[idx,:,:,:].unsqueeze(dim=0)
