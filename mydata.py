@@ -39,36 +39,29 @@ class DatasetFromFolder(data.Dataset):
         self.args = args
         self.train = train
         self.scale = args.scale[0]
-        self.LR_filenames, self.HR_filenames = self._get_filenames(name)
         self.bin = self.args.ext.find('sep') >=0 or self.args.ext.find('bin') >=0
+        self.LR_filenames, self.HR_filenames = self._get_filenames(name)
+        if args.n_colors == 4:
+            self.LR_labelnames, self.HR_labelnames = self._get_filenames('cityscapes/gtFine')
+
         if self.bin:
-            self.LR_filenames, self.HR_filenames = self._get_bin(name)
+            self.LR_filenames, self.HR_filenames = self._get_bin(name, self.LR_filenames, self.HR_filenames)
+            if args.n_colors == 4:
+                self.LR_labelnames, self.HR_labelnames = self._get_bin('cityscapes/gtFine', self.LR_labelnames, self.HR_labelnames)
         self.patch_size = args.patch_size
         
-        
+    
     def __getitem__(self, index):
         LR_filename, HR_filename = self.LR_filenames[index], self.HR_filenames[index]
-        if self.bin:
-            with open(HR_filename, 'rb') as _f: HR = pickle.load(_f)
-        else:
-            HR = load_img(HR_filename)
-            HR = np.asarray(HR)
-        #print(self.HR_filenames[index], self.classes[index])
-        if LR_filename:
-            if self.bin:
-                with open(LR_filename, 'rb') as _f: LR = pickle.load(_f)
-            else:
-                LR = load_img(LR_filename)
-                LR = np.asarray(LR)
-        else:
-            HR = np.asarray(HR)
-            h, w, c = np.shape(HR)
-            h2, w2 = (h//2)*2, (w//2)*2
-            HR = HR[0:h2, 0:w2, :]
-            LR = cv2.resize(HR, None, fx = 0.5, fy = 0.5,interpolation = cv2.INTER_CUBIC)
+        LR, HR = self._open_file(LR_filename, HR_filename)
 
+        if self.args.n_colors == 4:
+            LR_labelname, HR_labelname = self.LR_labelnames[index], self.HR_labelnames[index]
+            LRlabel, HRlabel = self._open_file(LR_labelname, HR_labelname)
+            LRlabel, HRlabel = LRlabel * self.args.rgb_range / 33, HRlabel * self.args.rgb_range / 33
+            LRlabel, HRlabel = np.expand_dims(LRlabel, axis=2), np.expand_dims(HRlabel, axis=2) 
+            LR, HR = np.concatenate((LR, LRlabel), axis = 2), np.concatenate((HR, HRlabel), axis = 2)
         if self.train:
-
             LR, HR = random_crop(LR, HR, patch_size = self.args.patch_size, scale = self.scale)
             LR, HR = augment(LR, HR)
 
@@ -99,6 +92,28 @@ class DatasetFromFolder(data.Dataset):
             hr = hr[0:ih * scale, 0:iw * scale]
 
         return lr, hr
+    def _open_file(self, LR_filename, HR_filename):
+        if self.bin:
+            with open(HR_filename, 'rb') as _f: HR = pickle.load(_f)
+        else:
+            HR = load_img(HR_filename)
+            HR = np.asarray(HR)
+
+        if LR_filename:
+            if self.bin:
+                with open(LR_filename, 'rb') as _f: LR = pickle.load(_f)
+            else:
+                LR = load_img(LR_filename)
+                LR = np.asarray(LR)
+        else:
+            HR = np.asarray(HR)
+            size = np.shape(HR)
+            h, w = size(0), size(1)
+            h2, w2 = (h//2)*2, (w//2)*2
+            HR = HR[0:h2, 0:w2, :]
+            LR = cv2.resize(HR, None, fx = 0.5, fy = 0.5,interpolation = cv2.INTER_CUBIC)
+        
+        return LR, HR
     def _get_filenames(self, name):
         root_dir = join(self.args.dir_data, name)
         if name == 'DIV2K':
@@ -156,7 +171,7 @@ class DatasetFromFolder(data.Dataset):
 
         return LR_filenames, HR_filenames
 
-    def _get_bin(self, name):
+    def _get_bin(self, name, HR_filenames, LR_filenames):
         if name.find('cityscapes/leftImg8bit') >= 0:
             image_path = 'leftImg8bit/'
             bin_path = 'leftImg8bit/bin/'
@@ -167,22 +182,21 @@ class DatasetFromFolder(data.Dataset):
             image_path = 'DIV2K/'
             bin_path = 'DIV2K/bin/'
 
-            
-        bin_hr = [x.replace(image_path, bin_path) for x in self.HR_filenames]
-        bin_hr = [x.replace('png', 'pt') for x in bin_hr]
 
-        bin_lr = [x.replace(image_path, bin_path) for x in self.LR_filenames]
+        bin_hr = [x.replace(image_path, bin_path) for x in HR_filenames]
+        bin_lr = [x.replace(image_path, bin_path) for x in LR_filenames]
+        bin_hr = [x.replace('png', 'pt') for x in bin_hr]
         bin_lr = [x.replace('png', 'pt') for x in bin_lr]
 
         if self.args.ext.find('sep') >= 0:  
-            for idx, (img_path, bin_path) in enumerate(tqdm(zip(self.HR_filenames, bin_hr), ncols=80)):
+            for idx, (img_path, bin_path) in enumerate(tqdm(zip(HR_filenames, bin_hr), ncols=80)):
                 dir_path, basename = os.path.split(bin_path)
                 os.makedirs(dir_path, exist_ok=True)
                 self._load_and_make(img_path, bin_path)
                 #print('Making binary files ' + bin_path)
 
 
-            for idx, (img_path, bin_path) in enumerate(tqdm(zip(self.LR_filenames, bin_lr), ncols=80)):
+            for idx, (img_path, bin_path) in enumerate(tqdm(zip(LR_filenames, bin_lr), ncols=80)):
                 dir_path, basename = os.path.split(bin_path)
                 os.makedirs(dir_path, exist_ok=True)
                 self._load_and_make(img_path, bin_path)

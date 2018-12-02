@@ -1,6 +1,7 @@
 from model import common
 
 import torch.nn as nn
+import torch
 
 url = {
     'r16f64x2': 'https://cv.snu.ac.kr/research/EDSR/models/edsr_baseline_x2-1bc95232.pt',
@@ -17,7 +18,7 @@ def make_model(args, parent=False):
 class EDSR(nn.Module):
     def __init__(self, args, conv=common.default_conv):
         super(EDSR, self).__init__()
-
+        self.n_colors = args.n_colors
         n_resblocks = args.n_resblocks
         n_feats = args.n_feats
         kernel_size = 3 
@@ -41,7 +42,7 @@ class EDSR(nn.Module):
         # define tail module
         m_tail = [
             common.Upsampler(conv, scale, n_feats, act=False),
-            conv(n_feats, args.n_colors, kernel_size)
+            conv(n_feats, 3, kernel_size)
         ]
 
         self.head = nn.Sequential(*m_head)
@@ -49,7 +50,12 @@ class EDSR(nn.Module):
         self.tail = nn.Sequential(*m_tail)
 
     def forward(self, x):
-        x = self.sub_mean(x)
+        if self.n_colors:
+            img, label = x[:,0:3,:,:], x[:,3,:,:]
+            x = self.sub_mean(img)
+            x = torch.cat((x, label.unsqueeze(dim=1)), 1)
+        else:
+            x = self.sub_mean(x)
         x = self.head(x)
 
         res = self.body(x)
