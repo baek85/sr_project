@@ -4820,3 +4820,16 @@ lr : 0.0001
 lr : 0.0001
 
 ===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+lr : 0.0001
+
+===> Epoch 0 starts:
+
+[ 186/ 186]    Average Loss: 0.5745    overall time: 58.3317 + 4.2320
+Average PSNR: 31.2219
+Average SSIM: 0.8817
+Average MSSSIM: 0.9601
+
+===> Epoch 1 starts:
