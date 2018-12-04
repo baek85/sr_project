@@ -16,7 +16,7 @@ from trainer import Trainer
 #valset = make_val_set(args)
 #trainset = make_train_set(args)
 #print('Make Dataset format same with DIV2K')
-
+#input()
 print('Make DataLoader ')
 #loader = data.Data(args)
 #train_loader = loader.loader_train

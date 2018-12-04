@@ -27,6 +27,8 @@ import pytorch_ssim
 import pytorch_msssim
 from tqdm import tqdm
 from utility import timer
+from loss.loss import Adversarial
+from loss.vgg import Perceptual
 
 def print_save(line, text_path):
     print(line)
@@ -54,10 +56,10 @@ class Trainer(object):
         self.test_timer = None
         self.training_loader = training_loader
         self.testing_loader = testing_loader
-        self.model_path = args.model_path
-        self.image_path = os.path.join(args.model_path, 'image')
+        self.model_path = os.path.join('experiment',args.model_path)
+        self.image_path = os.path.join(self.model_path, 'image')
         self.loss_type = args.loss_type
-        self.text_path = os.path.join(args.model_path,"log/lr_{}_bat_{}.txt".format(self.lr, self.batch_size))
+        self.text_path = os.path.join(self.model_path,"log/lr_{}_bat_{}.txt".format(self.lr, self.batch_size))
         if not os.path.exists(self.model_path):
              os.makedirs(self.model_path)
         if not os.path.exists(self.image_path):
@@ -71,6 +73,7 @@ class Trainer(object):
             self.model = torch.load(self.args.pretrain, map_location=lambda storage, loc: storage).to(self.device)
         else:
             self.model = edsr.EDSR(self.args).to(self.device)
+
         self.data_timer = timer(self.args)
         self.train_timer = timer(self.args)
         self.test_timer = timer(self.args)
@@ -79,6 +82,8 @@ class Trainer(object):
         self.L2= nn.MSELoss()
         self.ssim_loss = pytorch_ssim.SSIM(window_size = 11)
         self.msssim_loss = pytorch_msssim.MSSSIM()
+        self.gan_loss = Adversarial(self.args, 'GAN')
+        self.p_loss = Perceptual()
         torch.manual_seed(self.seed)
 
         if self.GPU_IN_USE:
@@ -87,12 +92,15 @@ class Trainer(object):
             self.L1.cuda()
             self.L2.cuda()
             self.ssim_loss.cuda()
-            self.msssim_loss.cuda(0)
+            self.msssim_loss.cuda()
+            self.gan_loss.cuda()
+            self.p_loss.cuda()
 
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.lr)
 
         end = int(self.epochs/self.args.lr_decay) * self.args.lr_decay
-        milestones = np.linspace(self.args.lr_decay, end, num = int(self.epochs/self.args.lr_decay), dtype = int)
+        #milestones = np.linspace(self.args.lr_decay, end, num = int(self.epochs/self.args.lr_decay), dtype = int)
+        milestones = [100, 300, 500]
         self.scheduler = optim.lr_scheduler.MultiStepLR(self.optimizer, milestones=milestones, gamma=self.args.gamma)  # lr decay
 
 
@@ -101,20 +109,28 @@ class Trainer(object):
         self.model.train()
         train_loss = 0
         train_length = 0
+        avg_psnr = 0
+        avg_ssim = 0
         self.data_timer.start()
         for batch_num, (LR, HR, filename) in enumerate(tqdm(self.training_loader, ncols=80)):
-        
-            batch_size = LR.size(0)
-            LR, HR = LR.to(self.device), HR.to(self.device)
+            
             if self.args.n_colors == 4:
-                HR, HRlabel = HR[:,0:3, :,:], HR[:,3,:,:]
+                LR, LRlabel = LR[0].to(self.device), LR[1].to(self.device)
+                HR, HRlabel = HR[0].to(self.device), HR[1].to(self.device)
+                LRlabel, HRlabel = LRlabel.unsqueeze(dim=1)*self.args.rgb_range/33, HRlabel.unsqueeze(dim=1)*self.args.rgb_range/33
+                input, output = torch.cat((LR,LRlabel),1), torch.cat((HR, HRlabel),1)
+            else:
+                input, output = LR.to(self.device), HR.to(self.device)
+            HR = output[:,0:3,:,:]
+            batch_size = LR.size(0)
+            #print(LR.size(), LRlabel.size())
             self.data_timer.stop()
             if batch_num == 0:
                 self.train_timer.start()
             else:
                 self.train_timer.go()
 
-            SR = self.model(LR)
+            SR = self.model(input)
                 
 
             #save_image(LR/self.args.rgb_range, os.path.join(self.image_path,'{}_LR.png'.format(batch_num)))
@@ -123,17 +139,36 @@ class Trainer(object):
             
             ## MSE Loss
 
-            loss = self.L1(SR, HR)
+            loss = 0
+            if self.loss_type.find('L1') >=0:
+                L1_loss = self.L1(SR, HR)
+                loss += L1_loss
             ## GAN Loss
-            if(self.loss_type == 'GAN'):
-                loss += 0
+            if self.loss_type.find('GAN') >=0:
+                gan_loss = self.gan_loss(SR,HR)
+                loss += 1e-3*gan_loss
+                #print(gan_loss)
+            if self.loss_type.find('VGG') >=0:
+                vgg_loss = self.p_loss(SR,HR, self.args.rgb_range)
+                loss += vgg_loss
+                #print(vgg_loss)
 
-            train_loss += loss.item()
+            train_loss += loss.item() * batch_size
             self.optimizer.zero_grad()
             loss.backward()
             self.optimizer.step()
             self.train_timer.stop()
-            
+            with torch.no_grad():
+                
+                for idx in range(batch_size):
+                    sr = SR[idx, :, :, :].unsqueeze(dim=0)
+                    hr = HR[idx, :, :, :].unsqueeze(dim=0)
+                    #print(sr.size(), hr.size())
+                    psnr = calc_psnr(sr, hr, int(self.args.scale[0]), self.args.rgb_range)
+                    ssim = self.ssim_loss(sr/self.args.rgb_range, hr/self.args.rgb_range)
+                    avg_psnr += psnr
+                    avg_ssim += ssim
+
             train_length += batch_size
             if(batch_num+1) % self.args.print_every == 0:
                 print_save("\n[{:4d}/{:4d}]    Average Loss: {:.4f}    overall time: {:.4f} + {:.4f}"
@@ -148,6 +183,10 @@ class Trainer(object):
         print_save("\n[{:4d}/{:4d}]    Average Loss: {:.4f}    overall time: {:.4f} + {:.4f}"
                 .format(batch_num+1, len(self.training_loader),(train_loss / train_length), 
                 self.data_timer.overall, self.train_timer.overall), self.text_path)
+        self.psnr.append(avg_psnr/train_length)
+        self.ssim.append(avg_ssim/train_length)
+        print_save("Average PSNR: {:.4f}".format(avg_psnr/ train_length), self.text_path)
+        print_save("Average SSIM: {:.4f}".format(avg_ssim/ train_length), self.text_path)
 
     def test(self):
         val_length = 0
@@ -157,18 +196,22 @@ class Trainer(object):
         self.model.eval()
         with torch.no_grad():
             for batch_num, (LR, HR, filename) in enumerate(tqdm(self.testing_loader, ncols=80)):
-                batch_size = LR.size(0)
-                LR, HR = LR.to(self.device), HR.to(self.device)
-
-
+                
                 if self.args.n_colors == 4:
-                    HR, HRlabel = HR[:,0:3, :,:], HR[:,3,:,:]
+                    LR, LRlabel = LR[0].to(self.device), LR[1].to(self.device)
+                    HR, HRlabel = HR[0].to(self.device), HR[1].to(self.device)
+                    LRlabel, HRlabel = LRlabel.unsqueeze(dim=1)*self.args.rgb_range/33, HRlabel.unsqueeze(dim=1)*self.args.rgb_range/33
+                    input, output = torch.cat((LR,LRlabel),1), torch.cat((HR, HRlabel),1)
+                else:
+                    input, output = LR.to(self.device), HR.to(self.device)
+                HR = output[:,0:3,:,:]
+                batch_size = input.size(0)
 
-                SR = self.model(LR)
+                SR = self.model(input)
                 
                 val_length +=1
                 mse = self.L2(SR/self.args.rgb_range,HR/self.args.rgb_range)
-                psnr = -10 * math.log10( mse)
+                #psnr = -10 * math.log10( mse)
                 psnr = calc_psnr(SR, HR, int(self.args.scale[0]), self.args.rgb_range)
                 ssim = self.ssim_loss(SR/self.args.rgb_range, HR/self.args.rgb_range)
                 msssim = self.msssim_loss(SR/self.args.rgb_range, HR/self.args.rgb_range)
@@ -176,22 +219,16 @@ class Trainer(object):
                 avg_ssim += ssim
                 avg_msssim += msssim
 
-                basename = os.path.basename(filename[0])
-                HR_name = os.path.join(self.image_path, 'HR_'+basename.replace('pt', 'png'))
-                LR_name = HR_name.replace("HR", "LR")
-                res_name = HR_name.replace("HR", "SR")
-                
-                HR_dir = os.path.dirname(HR_name)
-                if not os.path.exists(HR_dir):
-                    os.makedirs(HR_dir)
-                LR_dir = os.path.dirname(LR_name)
-                if not os.path.exists(LR_dir):
-                    os.makedirs(LR_dir)
-                res_dir = os.path.dirname(res_name)
-                if not os.path.exists(res_dir):
-                    os.makedirs(res_dir)    
                 
                 if self.args.test_only:
+                    basename = os.path.basename(filename[0])
+                    HR_name = os.path.join(self.image_path, '{}_HR_'.format(batch_num)+basename.replace('pt', 'png'))
+                    LR_name = HR_name.replace("HR", "LR")
+                    res_name = HR_name.replace("HR", "SR")
+                    
+                    HR_dir = os.path.dirname(HR_name)
+                    if not os.path.exists(HR_dir):
+                        os.makedirs(HR_dir)
                     save_image(LR/self.args.rgb_range, LR_name)
                     save_image(HR/self.args.rgb_range, HR_name)
                     save_image(SR/self.args.rgb_range, res_name)
@@ -209,7 +246,7 @@ class Trainer(object):
         print("Checkpoint saved to {}".format(model_out_path))
 
     def plot(self, epoch):
-        Y = np.linspace(0, epoch, epoch/self.args.test_every + 1)
+        X = np.linspace(0, epoch+1, epoch+1)
         fig = plt.figure()
         ax1 = fig.add_subplot(2, 1, 1)
         plt.xlabel('Epoch')
@@ -217,8 +254,8 @@ class Trainer(object):
         ax2 = fig.add_subplot(2,1,2)
         plt.xlabel('Epoch')
         plt.ylabel('SSIM')
-        ax1.plot(Y, self.psnr)
-        ax2.plot(Y, self.ssim)
+        ax1.plot(X, self.psnr)
+        ax2.plot(X, self.ssim)
         plt.savefig(os.path.join(self.image_path,'loss_psnr_ssim.png'))
 
     def run(self):
@@ -239,9 +276,11 @@ class Trainer(object):
             if not self.args.test_only:
                 self.train()
                 self.scheduler.step(epoch)
-                if (epoch) % self.args.test_every == 0:
-                    self.test()
-                    self.plot(epoch)
+                self.gan_loss.scheduler.step(epoch)
+                self.plot(epoch)
+                #if (epoch) % self.args.test_every == 0:
+                    #self.test()
+                    
                 self.save() 
                 
             if self.args.test_only:

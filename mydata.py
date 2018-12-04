@@ -17,12 +17,11 @@ import cv2
 import numpy as np
 import torch
 from skimage import color
-from data2 import common
 from torch.utils import data
 import os
 import pickle
 from tqdm import tqdm
-
+import time
 def is_img_file(filename):
     return any(filename.endswith(extension) for extension in [".hdr"])
 
@@ -36,13 +35,13 @@ class DatasetFromFolder(data.Dataset):
     def __init__(self, args, name='DIV2K' ,train=True):
         super(DatasetFromFolder, self).__init__()
         self.args = args
+        self.name = name
         self.train = train
         self.scale = args.scale[0]
         self.bin = self.args.ext.find('sep') >=0 or self.args.ext.find('bin') >=0
         self.LR_filenames, self.HR_filenames = self._get_filenames(name)
         if args.n_colors == 4:
             self.LR_labelnames, self.HR_labelnames = self._get_filenames('cityscapes/gtFine')
-
         if self.bin:
             self.LR_filenames, self.HR_filenames = self._get_bin(name, self.LR_filenames, self.HR_filenames)
             if args.n_colors == 4:
@@ -51,26 +50,40 @@ class DatasetFromFolder(data.Dataset):
         
     
     def __getitem__(self, index):
+        time1 = time.time()
         LR_filename, HR_filename = self.LR_filenames[index], self.HR_filenames[index]
         LR, HR = self._open_file(LR_filename, HR_filename)
-
-        if self.args.n_colors == 4:
+        time2 = time.time()
+        if self.args.n_colors == 4 and self.name.find('bin') == -1:
             LR_labelname, HR_labelname = self.LR_labelnames[index], self.HR_labelnames[index]
             LRlabel, HRlabel = self._open_file(LR_labelname, HR_labelname)
-            LRlabel, HRlabel = LRlabel * self.args.rgb_range / 33, HRlabel * self.args.rgb_range / 33
-            LRlabel, HRlabel = np.expand_dims(LRlabel, axis=2), np.expand_dims(HRlabel, axis=2) 
-            LR, HR = np.concatenate((LR, LRlabel), axis = 2), np.concatenate((HR, HRlabel), axis = 2)
+            time3 = time.time()
+            #LRlabel, HRlabel = LRlabel * self.args.rgb_range / 33, HRlabel * self.args.rgb_range / 33
+            #LRlabel, HRlabel = np.expand_dims(LRlabel, axis=2), np.expand_dims(HRlabel, axis=2) 
+            #LR, HR = np.concatenate((LR, LRlabel), axis = 2), np.concatenate((HR, HRlabel), axis = 2)
+        time4 = time.time()
         if self.train:
-            LR, HR = random_crop(LR, HR, patch_size = self.args.patch_size, scale = self.scale)
+            if self.args.n_colors == 4 and self.name.find('bin') == -1:
+                LR, HR, LRlabel, HRlabel = self._random_crop(LR, HR, LRlabel, HRlabel)
+            else:
+                LR, HR = random_crop(LR, HR, patch_size = self.patch_size, scale = self.scale)
             LR, HR = augment(LR, HR)
-
-        LR = torch.from_numpy((LR.transpose([2, 0, 1])).copy())
-        HR = torch.from_numpy((HR.transpose([2, 0, 1])).copy())
-        LR = LR.type(torch.FloatTensor)
-        HR = HR.type(torch.FloatTensor)
+        
+        LR, HR = np2tensor(LR, HR)
+        
         filename = HR_filename
+        time5 = time.time()
+        #if time3:
+            #print(time2-time1, time3-time2, time4-time3, time5-time4)
+        #else:
+            #print(time2-time1, time4-time2, time5-time4)
+        
+        if self.args.n_colors == 4 and self.name.find('bin') == -1:
+            LRlabel, HRlabel = torch.Tensor(LRlabel), torch.Tensor(HRlabel)
+            return (LR, LRlabel), (HR, HRlabel), filename
+        else:
+            return LR, HR, filename
 
-        return LR, HR, filename
 
     def __len__(self):
         return len(self.HR_filenames)
@@ -208,13 +221,27 @@ class DatasetFromFolder(data.Dataset):
         image = load_img(img_path)
         bin = np.asarray(image)
         with open(bin_path, 'wb') as _f: pickle.dump(bin, _f)
+    def _random_crop(self, LR, HR, LRlabel, HRlabel):
+        h, w, c = np.shape(HR)
 
+        crop_w = self.patch_size
+        crop_h = self.patch_size
+        i = random.randint(0, h- crop_h)
+        j = random.randint(0, w - crop_w)
+        #print(i//scale, (i+crop_h)//scale, j//scale, (j+crop_w)//scale)
+        LR = LR[i//self.scale:(i+crop_h)//self.scale, j//self.scale:(j+crop_w)//self.scale,:]
+        HR = HR[i:i+crop_h, j:j+crop_w, :]
+        LRlabel = LRlabel[i//self.scale:(i+crop_h)//self.scale, j//self.scale:(j+crop_w)//self.scale]
+        HRlabel = HRlabel[i:i+crop_h, j:j+crop_w]
+    
+        return LR, HR, LRlabel, HRlabel
 def get_train_loader(args):
     train_set = DatasetFromFolder(args, 'cityscapes/gtFine', train=True)
     train_set = DatasetFromFolder(args, args.data_train[0], train=True)
     train_loader = data.DataLoader(dataset=train_set,
                               batch_size=args.batch_size,
                               num_workers=0,
+                              pin_memory=False,
                               shuffle=True)
 
     return train_loader
@@ -224,6 +251,7 @@ def get_val_loader(args):
     val_loader = data.DataLoader(dataset=val_set,
                               batch_size=1,
                               num_workers=0,
+                              pin_memory=False,
                               shuffle=False)
     return val_loader
 
@@ -257,3 +285,11 @@ def augment(*args, hflip=True, rot=True):
         return img
 
     return [_augment(a) for a in args]
+
+def np2tensor(*args):
+    def _trans(img):
+        img = torch.from_numpy((img.transpose([2, 0, 1])).copy())
+        img = img.type(torch.FloatTensor)
+        return img
+
+    return [_trans(a) for a in args]

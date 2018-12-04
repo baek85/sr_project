@@ -15,9 +15,9 @@ parser.add_argument('--ext', type=str, default='sep',
                     help='dataset file extension')
 parser.add_argument('--dir_data', type=str, default='../../../dataset',
                     help='dataset directory')
-parser.add_argument('--data_train', type=str, default='DIV2K',
+parser.add_argument('--data_train', type=str, default='cityscapes/leftImg8bit',
                     help='train dataset name')
-parser.add_argument('--data_test', type=str, default='DIV2K',
+parser.add_argument('--data_test', type=str, default='cityscapes/leftImg8bit',
                     help='test dataset name')
 parser.add_argument('--scale', type=str, default='2',
                     help='super resolution size')
@@ -48,6 +48,9 @@ parser.add_argument('--shift_mean', default=True,
 parser.add_argument('--dilation', action='store_true',
                     help='use dilated convolution')
 
+# Loss
+parser.add_argument('--gan_k', type=int, default=5, 
+                    help='test images every n iters')
 # Training
 parser.add_argument('--test_every', type=int, default=5, 
                     help='test images every n iters')
@@ -69,7 +72,7 @@ parser.add_argument('--gamma', type=float, default=0.5,
                     help='learning rate decay factor for step decay')
                     
 # Loss
-parser.add_argument('--loss_type', type=str, default='L1', help='loss type   L1 or GAN')
+parser.add_argument('--loss_type', type=str, default='L1+VGG+GAN', help='loss type   L1 or GAN')
 
 # Log
 parser.add_argument('--model_path', type=str, default="model/EDSRx2.pth", help='model output path')
